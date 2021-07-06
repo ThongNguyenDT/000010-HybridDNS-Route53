@@ -1,49 +1,47 @@
 +++
-title = "Deploy Microsoft AD"
+title = "Triển khai Microsoft AD"
 date = 2020
 weight = 3
 chapter = false
 pre = "<b>1.3. </b>"
 +++
 
-**Contents:**
+Để **giả lập DNS on-premise**, chúng ta sẽ sử dụng dịch vụ **AWS Directory Service** để triển khai **AWS Managed Microsoft Active Directory** trong hai private subnet được tạo bởi CloudFormation như hình dưới đây:
+![Overview Diagram](../../../images/1/Architecture-1_PreReq.png?width=40pc)
+
+**Nội dung:**
 - [AWS Managed Microsoft Active Directory](#aws-managed-microsoft-active-directory)
 
 #### AWS Managed Microsoft Active Directory
 
-In order to **simulate on-premises DNS** infrastructure, we will use **AWS Managed Microsoft Active Directory** service.
+1. Đăng nhập vào **AWS Console** và truy cập vào **Directory Service console** thông qua khung tìm kiếm và tìm **Directory Services**.
+2. Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn **ap-southeast-1**)
+3. Nếu là lần đầu truy cập vào Directory Services ở region, bạn sẽ được dẫn đến màn hình chào khởi đầu. Mở rộng thanh bên trái và chọn **Directories**.
+4. Chọn **Set up directory**.
 
-1. Login to the **AWS Console** and navigate to the **Directory Service console**. In the find a service search field, type **Directory Services**.
-2. Make sure you are choosing the right region. Look at the upper right hand corner of the screen and switch to the your region if you are in a different region. (Here we use Asia Pacfic (Tokyo))
-3. If this is the first time you are opening the Directory Services in this region, you’ll be prompted with a welcome screen. Select **“AWS Managed Microsoft AD”** and click on **Set up directory**.
-4. In the next screen, select **“AWS Managed Microsoft AD”** and click **Next**.
+![1.3_SetUpDir](../../../images/1/1.3_SetUpDir.png?width=90pc)
 
-![Deploy MAD](../../../images/1/5-mad.png?width=90pc)
+5. Trong trang **Enter Directory Information**, nhập vào các thông tin sau:
+   - Ở **Edition**: chọn **Standard Edition**.
+   - Ở **Directory DNS name**: onprem.example.com (*tên DNS này phải là duy nhất trong số các directory của bạn*).
+   - Ở **Directory NetBIOS name**: onprem (*tên NetBIOS này phải là duy nhất trong số các directory của bạn*).
+   - Ở **Directory Description**: This is to simulate the on-prem AD.
+   - Ở **Admin password**: Sử dụng mật khẩu bạn có thể nhớ. Vui lòng chú ý các yêu cầu về độ phức tạp của mật khẩu được nêu trên màn hình.
+   
+   - Ở **Confirm password**: Nhập lại mật khẩu một lần nữa.
+   - Chọn **Next**.
 
-5. In the **Enter Directory Information** screen, enter the following information:
-   - For **Edition**: select **Standard Edition**.
-   - **Directory DNS name**: onprem.example.com [Make this DNS name **unique** from your other directories so you can establish trusts in the future if required.]
-   - **Directory NetBIOS name**: onprem [Make this NetBIOS **unique** from your other directories as well if you need establish trusts in the future if required.]
-   - **Directory Description**: This is to simulate the on-prem AD.
-   - **Admin password**: Use a password you can remember. You will use this in future labs. 
-   {{% notice info %}}
-   Please also review the password complexity requirements outlined on the screen.
-   {{% /notice %}}
-   - **Confirm password**: Confirm the password again
-   - Click **Next**.
+![1.3_EnterDirInfo](../../../images/1/1.3_EnterDirInfo.png?width=90pc)
 
-![Deploy MAD](../../../images/1/5-mad2.png?width=90pc)
+6. Ở **Choose VPC and subnets**, chọn VPC **HybridDNS-VPCStack** mà chúng ta đã tạo từ trước và hai private subnet **Private subnet 1A** và **Private subnet 2A**. Sau đó, chọn **Next**.
 
-6. For the **VPC and subnets**, please select the **HybridDNS-VPCStack** that you created above and select the two private subnets **Private subnet 1A** and **Private subnet 2A**.
-7. After selecting the **VPC and Subnets**, Click **Next**.
+![1.3_ChooseVPC](../../../images/1/1.3_ChooseVPC.png?width=90pc)
 
-![Deploy MAD](../../../images/1/5-mad3.png?width=90pc)
+7. Ở màn hình **Review & create**, xem lại thiết lập và chọn **Create Directory**.
 
-8. On the **Review & create** screen, review the settings and click on **Create Directory**.
-
-![Deploy MAD](../../../images/1/5-mad4.png?width=90pc)
-
-9.  The directory will take about 20 minutes to create. During this time, AWS is provisioning two Windows servers, and promoting them to be Active Directory domain controllers for the AD forest that you specified. This AD forest will be a new AD forest.
-10.  The process will be complete when you see the status field turn to **Active**. Once the directory is created, you can see the details by clicking on the **Directory ID**. The two **DNS IP addresses** that are listed are the IP addresses of the elastic network interfaces (ENI) that have been placed in your availability zones to communicate to the **AWS Managed Microsoft AD Domain Controllers**.
-
-![Deploy MAD](../../../images/1/5-mad5.png?width=90pc)
+8. Directory sẽ mất khoảng 20 phút để tạo. Trong thời gian này, AWS sẽ cung cấp hai máy chủ Windows và nâng chúng trở thành Active Directory domain controllers cho AD forest mà bạn đã chỉ định. AD forest này sẽ là một AD forest mới. Quá trình sẽ hoàn tất khi bạn thấy trạng thái chuyển sang **Active**
+9. Khi directory đã được tạo, bạn có thể xem chi tiết bằng cách nhấp vào **Directory ID**. Hai **địa chỉ IP của DNS** được liệt kê là địa chỉ IP của elastic network interfaces (ENI) đã được đặt availability zone của bạn để giao tiếp với **AWS Managed Microsoft AD Domain Controllers**.
+{{% notice note %}}
+Hãy ghi nhớ hai địa chỉ IP của directory đã được tạo để sử dụng cho phần sau.
+{{% /notice %}}
+![1.3_DirIP](../../../images/1/1.3_DirIP.png?width=90pc)

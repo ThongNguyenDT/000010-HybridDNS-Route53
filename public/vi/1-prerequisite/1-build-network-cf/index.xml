@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Xây dựng hạ tầng với CloudFormation on Thiết lập Hybrid DNS với Route 53 Resolver</title>
+    <title>Chuẩn bị hạ tầng on Thiết lập Hybrid DNS với Route 53 Resolver</title>
     <link>/vi/1-prerequisite/1-build-network-cf/</link>
-    <description>Recent content in Xây dựng hạ tầng với CloudFormation on Thiết lập Hybrid DNS với Route 53 Resolver</description>
+    <description>Recent content in Chuẩn bị hạ tầng on Thiết lập Hybrid DNS với Route 53 Resolver</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
     
 	<atom:link href="/vi/1-prerequisite/1-build-network-cf/index.xml" rel="self" type="application/rss+xml" />
     

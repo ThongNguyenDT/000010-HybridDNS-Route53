@@ -12,21 +12,21 @@
     <title>Triển khai Microsoft AD :: Thiết lập Hybrid DNS với Route 53 Resolver</title>
 
     
-    <link href="/css/nucleus.css?1610759612" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1610759612" rel="stylesheet">
-    <link href="/css/hybrid.css?1610759612" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1610759612" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1610759612" rel="stylesheet">
-    <link href="/css/auto-complete.css?1610759612" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1610759612" rel="stylesheet">
-    <link href="/css/theme.css?1610759612" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1610759612" rel="stylesheet">
+    <link href="/css/nucleus.css?1625549313" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625549313" rel="stylesheet">
+    <link href="/css/hybrid.css?1625549313" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625549313" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625549313" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625549313" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625549313" rel="stylesheet">
+    <link href="/css/theme.css?1625549313" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625549313" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1610759612" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625549313" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1610759612"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625549313"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1610759612"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1610759612"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625549313"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625549313"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1610759612"></script>
+<script type="text/javascript" src="/js/search.js?1625549313"></script>
 
     
   </div>
@@ -113,18 +113,114 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/" title="Xây dựng hạ tầng với CloudFormation" class="dd-item 
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/" title="Chuẩn bị hạ tầng" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-prerequisite/1-build-network-cf/">
-          <b>1.1. </b>Xây dựng hạ tầng với CloudFormation
+          <b>1.1. </b>Chuẩn bị hạ tầng
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/">
+          <b>1.1.1 </b>Tạo Key Pair
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.2-quick-start/" title="CloudFormation Quick Start" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.2-quick-start/">
+          <b>1.1.2 </b>CloudFormation Quick Start
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.3-security-setup/">
+          <b>1.1.3 </b>Thiết lập bảo mật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -204,12 +300,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/">
+      <a href="/vi/2-implement-hybrid-dns/">
           <b>2. </b>Thiết lập Hybrid DNS
           
             <i class="fas fa-check read-icon"></i>
@@ -235,12 +331,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/1-outbound-endpoint/">
+      <a href="/vi/2-implement-hybrid-dns/1-outbound-endpoint/">
           <b>2.1. </b>Tạo Outbound Endpoint
           
             <i class="fas fa-check read-icon"></i>
@@ -263,12 +359,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/2-route53-rule/">
+      <a href="/vi/2-implement-hybrid-dns/2-route53-rule/">
           <b>2.2. </b>Tạo Route 53 Resolver Rule
           
             <i class="fas fa-check read-icon"></i>
@@ -291,12 +387,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/3-inbound-endpoint/">
+      <a href="/vi/2-implement-hybrid-dns/3-inbound-endpoint/">
           <b>2.3. </b>Tạo Inbound Endpoint
           
             <i class="fas fa-check read-icon"></i>
@@ -319,13 +415,13 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/4-testing-result/" title="Thử nghiệm kết quả" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/4-testing-result/" title="Kiểm tra kết quả" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/4-testing-result/">
-          <b>2.4. </b>Thử nghiệm kết quả
+      <a href="/vi/2-implement-hybrid-dns/4-testing-result/">
+          <b>2.4. </b>Kiểm tra kết quả
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,6 +436,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-clean-up/">
+          <b>3. </b>Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -427,11 +549,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7834843&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -519,51 +641,68 @@
 
 
 
-	<p><strong>Nội dung:</strong></p>
+	<p>Để <strong>giả lập DNS on-premise</strong>, chúng ta sẽ sử dụng dịch vụ <strong>AWS Directory Service</strong> để triển khai <strong>AWS Managed Microsoft Active Directory</strong> trong hai private subnet được tạo bởi CloudFormation như hình dưới đây:
+<img src="../../../images/1/Architecture-1_PreReq.png?width=40pc" alt="Overview Diagram"></p>
+<p><strong>Nội dung:</strong></p>
 <ul>
 <li><a href="#aws-managed-microsoft-active-directory">AWS Managed Microsoft Active Directory</a></li>
 </ul>
 <h4 id="aws-managed-microsoft-active-directory">AWS Managed Microsoft Active Directory</h4>
-<p>Để <strong>giả lập DNS on-premise</strong>, chúng ta sẽ sử dụng dịch vụ <strong>AWS Managed Microsoft Active Directory</strong> trong bài thực hành này.</p>
 <ol>
 <li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>Directory Service console</strong> thông qua khung tìm kiếm và tìm <strong>Directory Services</strong>.</li>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn Asia Pacfic (Tokyo))</li>
-<li>Nếu là lần đầu truy cập vào Directory Services ở region, bạn sẽ được dẫn đến màn hình chào khởi đầu. Chọn <strong>“AWS Managed Microsoft AD”</strong> và chọn <strong>Set up directory</strong>.</li>
-<li>Ở trang kế tiếp, chọn <strong>“AWS Managed Microsoft AD”</strong> và chọn <strong>Next</strong>.</li>
+<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn <strong>ap-southeast-1</strong>)</li>
+<li>Nếu là lần đầu truy cập vào Directory Services ở region, bạn sẽ được dẫn đến màn hình chào khởi đầu. Mở rộng thanh bên trái và chọn <strong>Directories</strong>.</li>
+<li>Chọn <strong>Set up directory</strong>.</li>
 </ol>
-<p><img src="../../../images/1/5-mad.png?width=90pc" alt="Deploy MAD"></p>
+<p><img src="../../../images/1/1.3_SetUpDir.png?width=90pc" alt="1.3_SetUpDir"></p>
 <ol start="5">
 <li>Trong trang <strong>Enter Directory Information</strong>, nhập vào các thông tin sau:
 <ul>
-<li>Ở <strong>Edition</strong>: chọn <strong>Standard Edition</strong>.</li>
-<li>Ở <strong>Directory DNS name</strong>: onprem.example.com [Đặt tên DNS này là <strong>duy nhất</strong> cho các directory khác của bạn để bạn có thể thiết lập trust trong tương lai nếu cần thiết.]</li>
-<li>Ở <strong>Directory NetBIOS name</strong>: onprem [Đặt tên NETBIOS này là <strong>duy nhất</strong> cho các directory khác của bạn để bạn có thể thiết lập trust trong tương lai nếu cần thiết]</li>
-<li>Ở <strong>Directory Description</strong>: This is to simulate the on-prem AD.</li>
-<li>Ở <strong>Admin password</strong>: Sử dụng mật khẩu bạn có thể nhớ. Bạn sẽ sử dụng nó trong các phần tiếp theo. 
-
-<div class="notices info" ><p>Vui lòng chú ý các yêu cầu về độ phức tạp của mật khẩu được nêu trên màn hình.</p>
-</div>
+<li>
+<p>Ở <strong>Edition</strong>: chọn <strong>Standard Edition</strong>.</p>
 </li>
-<li>Ở <strong>Confirm password</strong>: Nhập lại mật khẩu một lần nữa.</li>
-<li>Chọn <strong>Next</strong>.</li>
+<li>
+<p>Ở <strong>Directory DNS name</strong>: onprem.example.com (<em>tên DNS này phải là duy nhất trong số các directory của bạn</em>).</p>
+</li>
+<li>
+<p>Ở <strong>Directory NetBIOS name</strong>: onprem (<em>tên NetBIOS này phải là duy nhất trong số các directory của bạn</em>).</p>
+</li>
+<li>
+<p>Ở <strong>Directory Description</strong>: This is to simulate the on-prem AD.</p>
+</li>
+<li>
+<p>Ở <strong>Admin password</strong>: Sử dụng mật khẩu bạn có thể nhớ. Vui lòng chú ý các yêu cầu về độ phức tạp của mật khẩu được nêu trên màn hình.</p>
+</li>
+<li>
+<p>Ở <strong>Confirm password</strong>: Nhập lại mật khẩu một lần nữa.</p>
+</li>
+<li>
+<p>Chọn <strong>Next</strong>.</p>
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="../../../images/1/5-mad2.png?width=90pc" alt="Deploy MAD"></p>
+<p><img src="../../../images/1/1.3_EnterDirInfo.png?width=90pc" alt="1.3_EnterDirInfo"></p>
 <ol start="6">
-<li>Ở <strong>VPC and subnets</strong>, chọn VPC <strong>HybridDNS-VPCStack</strong> mà chúng ta đã tạo từ trước và hai private subnet <strong>Private subnet vv1A</strong> và <strong>Private subnet 2A</strong>.</li>
-<li>Sau khi lựa chọn <strong>VPC and Subnets</strong>, Chọn <strong>Next</strong>.</li>
+<li>Ở <strong>Choose VPC and subnets</strong>, chọn VPC <strong>HybridDNS-VPCStack</strong> mà chúng ta đã tạo từ trước và hai private subnet <strong>Private subnet 1A</strong> và <strong>Private subnet 2A</strong>. Sau đó, chọn <strong>Next</strong>.</li>
 </ol>
-<p><img src="../../../images/1/5-mad3.png?width=90pc" alt="Deploy MAD"></p>
-<ol start="8">
-<li>Ở màn hình <strong>Review &amp; create</strong>, xem lại thiết lập và chọn <strong>Create Directory</strong>.</li>
+<p><img src="../../../images/1/1.3_ChooseVPC.png?width=90pc" alt="1.3_ChooseVPC"></p>
+<ol start="7">
+<li>
+<p>Ở màn hình <strong>Review &amp; create</strong>, xem lại thiết lập và chọn <strong>Create Directory</strong>.</p>
+</li>
+<li>
+<p>Directory sẽ mất khoảng 20 phút để tạo. Trong thời gian này, AWS sẽ cung cấp hai máy chủ Windows và nâng chúng trở thành Active Directory domain controllers cho AD forest mà bạn đã chỉ định. AD forest này sẽ là một AD forest mới. Quá trình sẽ hoàn tất khi bạn thấy trạng thái chuyển sang <strong>Active</strong></p>
+</li>
+<li>
+<p>Khi directory đã được tạo, bạn có thể xem chi tiết bằng cách nhấp vào <strong>Directory ID</strong>. Hai <strong>địa chỉ IP của DNS</strong> được liệt kê là địa chỉ IP của elastic network interfaces (ENI) đã được đặt availability zone của bạn để giao tiếp với <strong>AWS Managed Microsoft AD Domain Controllers</strong>.
+
+<div class="notices note" ><p>Hãy ghi nhớ hai địa chỉ IP của directory đã được tạo để sử dụng cho phần sau.</p>
+</div>
+
+<img src="../../../images/1/1.3_DirIP.png?width=90pc" alt="1.3_DirIP"></p>
+</li>
 </ol>
-<p><img src="../../../images/1/5-mad4.png?width=90pc" alt="Deploy MAD"></p>
-<ol start="9">
-<li>Directory sẽ mất khoảng 20 phút để tạo. Trong thời gian này, AWS sẽ cung cấp hai máy chủ Windows và nâng chúng trở thành Active Directory domain controllers cho AD forest mà bạn đã chỉ định. AD forest này sẽ là một AD forest mới.</li>
-<li>Quá trình sẽ hoàn tất khi bạn thấy trạng thái chuyển sang <strong>Active</strong>. Khi directory được tạo, bạn có thể xem chi tiết bằng cách nhấp vào <strong>Directory ID</strong>. Hai <strong>địa chỉ IP của DNS</strong> được liệt kê là địa chỉ IP của elastic network interfaces (ENI) đã được đặt availability zone của bạn để giao tiếp với <strong>AWS Managed Microsoft AD Domain Controllers</strong>.</li>
-</ol>
-<p><img src="../../../images/1/5-mad5.png?width=90pc" alt="Deploy MAD"></p>
 
 
 
@@ -628,8 +767,58 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -751,6 +940,22 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -767,7 +972,7 @@
 			<a class="nav nav-prev" href="/vi/1-prerequisite/2-connect-to-rdgw/" title="Kết nối đến RDGW"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-impletement-hybrid-dns/" title="Thiết lập Hybrid DNS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -777,19 +982,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1610759612"></script>
-    <script src="/js/jquery.sticky.js?1610759612"></script>
-    <script src="/js/featherlight.min.js?1610759612"></script>
-    <script src="/js/highlight.pack.js?1610759612"></script>
+    <script src="/js/clipboard.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625549313"></script>
+    <script src="/js/jquery.sticky.js?1625549313"></script>
+    <script src="/js/featherlight.min.js?1625549313"></script>
+    <script src="/js/highlight.pack.js?1625549313"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1610759612"></script>
-    <script src="/js/learn.js?1610759612"></script>
-    <script src="/js/hugo-learn.js?1610759612"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625549313"></script>
+    <script src="/js/learn.js?1625549313"></script>
+    <script src="/js/hugo-learn.js?1625549313"></script>
 
-    <link href="/mermaid/mermaid.css?1610759612" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1610759612"></script>
+    <link href="/mermaid/mermaid.css?1625549313" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625549313"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

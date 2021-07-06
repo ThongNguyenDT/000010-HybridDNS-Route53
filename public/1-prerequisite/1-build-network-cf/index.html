@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Build Network with CloudFormation :: Implement Hybrid DNS with Route53 Resolver</title>
+    <title>Chuẩn bị hạ tầng :: Implement Hybrid DNS with Route53 Resolver</title>
 
     
-    <link href="/css/nucleus.css?1610759612" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1610759612" rel="stylesheet">
-    <link href="/css/hybrid.css?1610759612" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1610759612" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1610759612" rel="stylesheet">
-    <link href="/css/auto-complete.css?1610759612" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1610759612" rel="stylesheet">
-    <link href="/css/theme.css?1610759612" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1610759612" rel="stylesheet">
+    <link href="/css/nucleus.css?1625549313" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625549313" rel="stylesheet">
+    <link href="/css/hybrid.css?1625549313" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625549313" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625549313" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625549313" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625549313" rel="stylesheet">
+    <link href="/css/theme.css?1625549313" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625549313" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1610759612" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625549313" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1610759612"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625549313"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1610759612"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1610759612"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625549313"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625549313"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1610759612"></script>
+<script type="text/javascript" src="/js/search.js?1625549313"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/" title="Prerequiste" class="dd-item 
+    <li data-nav-id="/1-prerequisite/" title="Các bước chuẩn bị" class="dd-item 
         parent
         
         
         ">
       <a href="/1-prerequisite/">
-          <b>1. </b>Prerequiste
+          <b>1. </b>Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,104 +113,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/" title="Build Network with CloudFormation" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/" title="Chuẩn bị hạ tầng" class="dd-item 
         
         active
         
         ">
       <a href="/1-prerequisite/1-build-network-cf/">
-          <b>1.1. </b>Build Network with CloudFormation
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/2-connect-to-rdgw/" title="Connecting to RDGW" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/2-connect-to-rdgw/">
-          <b>1.2. </b>Connecting to RDGW
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/3-deploy-mad/" title="Deploy Microsoft AD" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/3-deploy-mad/">
-          <b>1.3. </b>Deploy Microsoft AD
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-impletement-hybrid-dns/" title="Setting Up Hybrid DNS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-impletement-hybrid-dns/">
-          <b>2. </b>Setting Up Hybrid DNS
+          <b>1.1. </b>Chuẩn bị hạ tầng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -235,13 +144,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/1-outbound-endpoint/" title="Config Outbound Endpoint" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/1-outbound-endpoint/">
-          <b>2.1. </b>Config Outbound Endpoint
+      <a href="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/">
+          <b>1.1.1 </b>Tạo Key Pair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -263,13 +172,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/2-route53-rule/" title="Config Route53 Resolver Rules" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/" title="CloudFormation Quick Start" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/2-route53-rule/">
-          <b>2.2. </b>Config Route53 Resolver Rules
+      <a href="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/">
+          <b>1.1.2 </b>CloudFormation Quick Start
           
             <i class="fas fa-check read-icon"></i>
           
@@ -291,41 +200,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/3-inbound-endpoint/" title="Config Inbound Endpoint" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/3-inbound-endpoint/">
-          <b>2.3. </b>Config Inbound Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-impletement-hybrid-dns/4-testing-result/" title="Testing Result" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-impletement-hybrid-dns/4-testing-result/">
-          <b>2.4. </b>Testing Result
+      <a href="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/">
+          <b>1.1.3 </b>Thiết lập bảo mật
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,6 +221,247 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/2-connect-to-rdgw/" title="Kết nối đến RDGW" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/2-connect-to-rdgw/">
+          <b>1.2. </b>Kết nối đến RDGW
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/3-deploy-mad/" title="Triển khai Microsoft AD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/3-deploy-mad/">
+          <b>1.3. </b>Triển khai Microsoft AD
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/">
+          <b>2. </b>Thiết lập Hybrid DNS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/1-outbound-endpoint/">
+          <b>2.1. </b>Tạo Outbound Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/2-route53-rule/">
+          <b>2.2. </b>Tạo Route 53 Resolver Rule
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/3-inbound-endpoint/">
+          <b>2.3. </b>Tạo Inbound Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/4-testing-result/" title="Kiểm tra kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/4-testing-result/">
+          <b>2.4. </b>Kiểm tra kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-clean-up/">
+          <b>3. </b>Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -427,11 +549,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7834843&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -474,7 +596,7 @@
             
           
           
-            <a href='/'>Hybrid DNS with Route53 Resolver</a> > <a href='/1-prerequisite/'>Prerequiste</a> > Build Network with CloudFormation
+            <a href='/'>Hybrid DNS với Route53 Resolver</a> > <a href='/1-prerequisite/'>Các bước chuẩn bị</a> > Chuẩn bị hạ tầng
           
         
           
@@ -511,7 +633,7 @@
           
             <h1>
               
-              Build Network with CloudFormation
+              Chuẩn bị hạ tầng
             </h1>
           
 
@@ -519,161 +641,15 @@
 
 
 
-	<p>The first step to building a Windows infrastructure in AWS is to build out the network infrastructure. You will leverage an <a href="https://aws.amazon.com/quickstart/architecture/rd-gateway/"><strong>AWS Quick Start</strong></a> to build out a secure highly available network infrastructure show below.</p>
-<p>AWS Quick Starts leverage AWS CloudFormation which is AWS’s Infrastructure as Code (IaC) service that allows you to create infrastructure based upon a template (written in YAML or JSON). The template is uploaded to the CloudFormation service and itc creates the infrastructure described in the template.</p>
-<p><img src="../../../images/1/0-diagram.png?width=40pc" alt="Overview Diagram"></p>
-<p><strong>Contents:</strong></p>
+	<h4 id="tổng-quan">Tổng quan</h4>
+<p>Ở bước này, bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng <a href="https://aws.amazon.com/quickstart/architecture/rd-gateway/"><strong>template</strong></a> từ <strong>AWS Quick Start</strong> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật bằng <strong>AWS CloudFormation</strong>. Đây là kiến trúc sẽ được xây dựng từ template.</p>
+<p><img src="../../../images/1/Architecture-1.1_CFN.png?width=40pc" alt="Overview Diagram"></p>
+<p><strong>Nội dung:</strong></p>
 <ul>
-<li><a href="#111-creating-a-key-pair">1.1.1. Creating a Key Pair</a></li>
-<li><a href="#112-running-the-quick-start-cloudformation-template">1.1.2. Running the Quick Start CloudFormation Template</a></li>
-<li><a href="#113-securing-the-environment">1.1.3. Securing the Environment</a></li>
+<li><a href="1.1.1-create-keypair/">1.1.1. Tạo Key Pair</a></li>
+<li><a href="1.1.2-quick-start/">1.1.2. Khởi chạy Template CloudFormation Quick Start</a></li>
+<li><a href="1.1.3-security-setup/">1.1.3. Thiết lập bảo mật</a></li>
 </ul>
-<h4 id="111-creating-a-key-pair">1.1.1. Creating a Key Pair</h4>
-<p>In order to secure access to your EC2 instances, AWS uses private/public key technology and this takes the form of an AWS key pair. With Windows instances, the key pair is used to obtain the administrator password via the Amazon EC2 console. In this section, you will create the key pair.</p>
-<ol>
-<li>Login to the <strong>AWS Console</strong> and navigate to the <strong>EC2 Management console</strong>. To get to the <strong>EC2 management console</strong>, in the find a service search box, type <strong>EC2</strong>.</li>
-<li>Make sure you are choosing the right region. Look at the upper right hand corner of the screen and switch to the your region if you are in a different region. (Here we use Asia Pacfic (Tokyo))</li>
-<li>On the left menu bar, select <strong>Key Pairs</strong>.</li>
-<li>Select <strong>Create key pair</strong>.</li>
-<li>In the <strong>Create Key pair</strong> screen,
-<ul>
-<li>For <strong>Name</strong>, enter &ldquo;hybrid-dns&rdquo;. (Or any name that suitable for you)</li>
-<li>For <strong>File format</strong>, check pem.</li>
-<li>Press <strong>Create key pair</strong>.
-<img src="../../../images/1/1-keypair.png?width=90pc" alt="Create Key Pair"></li>
-</ul>
-</li>
-<li><strong>Important</strong>: AWS downloads the private key portion of the key pair. It will have a name like <strong>hybrid-dns.pem</strong>. Be sure to save the PEM file and record the location of this file. You will use this file later to decrypt the administrator password. You won’t be able to re-download this file later.</li>
-</ol>
-<h4 id="112-running-the-quick-start-cloudformation-template">1.1.2. Running the Quick Start CloudFormation Template</h4>
-<p>In this section, you are going to get hands-on experience with AWS CloudFormation to build out the base network infrastructure.</p>
-<ol>
-<li>Login to the <strong>AWS Console</strong> and navigate to the <strong>CloudFormation (CFN) console</strong>. In the find a service search box, type <strong>CloudFormation</strong>.</li>
-<li>Make sure you are choosing the right region. Look at the upper right hand corner of the screen and switch to the your region if you are in a different region. (Here we use Asia Pacfic (Tokyo))</li>
-<li>Click on <strong>Create stack</strong> &gt; <strong>With new resources (standard)</strong></li>
-<li>In the <strong>Create stack</strong> screen, enter the values as shown below and click on <strong>Next</strong>.
-<ul>
-<li><strong>Prepare Template</strong>: Template is ready</li>
-<li><strong>Template Source</strong>: Amazon S3 URL</li>
-<li><strong>Amazon S3 URL</strong>:</li>
-</ul>
-</li>
-</ol>
-<pre><code>https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template
-</code></pre><p>Or download the template below:
-
-<section class="attachments orange">
-	<label>
-		<i class="fas fa-paperclip" aria-hidden="true"></i>
-		CloudFormation Template
-	</label>
-	
-		
-	
-	<div class="attachments-files">
-	
-		
-		
-			
-				<li>
-					<a href="/1-prerequisite/1-build-network-cf/_index.files/rdgw-master.template" >
-						rdgw-master.template
-					</a>
-					(9 ko)
-				</li>
-			
-		
-	
-	<div>
-	
-</section>
-
-</p>
-<p><img src="../../../images/1/2-createstack.png?width=90pc" alt="Create Stack"></p>
-<ol start="5">
-<li>
-<p>For the <strong>Stack name</strong>, enter HybridDNS.</p>
-</li>
-<li>
-<p>For the <strong>Availability Zones</strong>, select ap-northeast-1a and ap-northeast-1c.</p>
-</li>
-<li>
-<p>For <strong>VPC CIDR</strong>, Private Subnet 1 &amp; 2 CIDR, and Public Subnet 1 &amp; 2 CIDR, leave the default values.
-<img src="../../../images/1/2-createstack2.png?width=90pc" alt="Create Stack"></p>
-</li>
-<li>
-<p>For the <strong>Allowed Remote Desktop Gateway External Access CIDR</strong>, enter 0.0.0.0/0. 
-
-<div class="notices warning" ><p>This will allow any IP to be able to RDP into the RDP gateway.<br>
-This is not a secure configuration and it is not recommended for a production deployment. We will go back and tighten this down after the CloudFormation stack has been deployed.</p>
-</div>
-</p>
-</li>
-<li>
-<p>In the <strong>Key Pair Name</strong>, select the Key Pair that you created earlier (e.g. hybrid-dns).</p>
-</li>
-<li>
-<p>For the <strong>Remote Desktop Gateway Instance Type</strong>, leave the default (t2.large).</p>
-</li>
-<li>
-<p>For the <strong>Number of RDGW Hosts</strong>, leave the default (1).<br>
-
-<div class="notices note" ><p>Please note that the above diagram shows two RDGW hosts (one in each Availablity Zone (AZ)).<br>
-For the purposes of the lab, we are starting with one RDGW host to reduce the amount of time that the CloudFormation process takes to run. However in the diagram, you can see that the RDGW hosts are deployed into an AutoScaling group.<br>
-After the CloudFormation process finishes, you can examine the AutoScaling group. Autoscaling groups are a key service that can provide scalability and availability to your application.</p>
-</div>
-</p>
-</li>
-<li>
-<p>For <strong>Admin User Name</strong>, leave the default (StackAdmin).</p>
-</li>
-<li>
-<p>For <strong>Admin Password</strong>, set a password that you will remember. Note, the password complexity requirements (8 characters minimum, and needs letters, numbers, and symbols).</p>
-</li>
-<li>
-<p>For <strong>Domain DNS Name</strong>, leave the default (example.com).</p>
-</li>
-<li>
-<p>For the remaining options, leave the default values and click <strong>Next</strong>.
-<img src="../../../images/1/2-createstack3.png?width=90pc" alt="Create Stack"></p>
-</li>
-<li>
-<p>On the <strong>Configure Stack Options</strong>, review the options. Click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>On the <strong>Review HybridDNS</strong> screen, review the settings. Check the two checkboxes and click <strong>Create Stack</strong>.
-<img src="../../../images/1/2-createstack4.png?width=90pc" alt="Create Stack"></p>
-</li>
-</ol>
-
-<div class="notices info" ><p>The template takes about 15 minutes to complete. During this time, we will review what the CloudFormation template is creating.<br>
-Once stack creation is completed, the status on the stack creation will change to <strong>CREATE_COMPLETE</strong>.</p>
-</div>
-
-<p><img src="../../../images/1/2-createstack5.png?width=90pc" alt="Create Stack"></p>
-<h4 id="113-securing-the-environment">1.1.3. Securing the Environment</h4>
-<p>We are going to tighten the security of the RDGW access.</p>
-<ol>
-<li>Login to the <strong>AWS Console</strong> and navigate to the <strong>EC2 Management console</strong>. To get to the <strong>EC2 management console</strong>, in the find a service search box, type <strong>EC2</strong>.</li>
-<li>Make sure you are choosing the right region. Look at the upper right hand corner of the screen and switch to the your region if you are in a different region. (Here we use Asia Pacfic (Tokyo))</li>
-<li>In the left hand menu, click <strong>Security Groups</strong>.</li>
-<li>Select the checkbox for the security group that has a description, <strong>“Enable RDP access from the Internet”</strong></li>
-<li>In the bottom area, select the <strong>Inbound</strong> tab.</li>
-<li>Press <strong>Edit</strong>.
-<img src="../../../images/1/3-secureenvironment.png?width=90pc" alt="Secure Environment"></li>
-<li>Click the <strong>Delete</strong> next to the rule that contain the <strong>Port Range, 3391</strong> to delete the rule</li>
-<li>Click the <strong>Delete</strong> next to the rule that contain the <strong>Port Range, 443</strong> to delete the rule</li>
-<li>On the <strong>RDP rule</strong> in the <strong>Source</strong> column, click the dropdown and select <strong>“My IP”</strong></li>
-<li>On the <strong>ICMP rule</strong> in the <strong>Source</strong> column, click the dropdown and select <strong>“My IP”</strong></li>
-<li>Press <strong>Save</strong>
-<img src="../../../images/1/3-secureenvironment2.png?width=90pc" alt="Secure Environment"></li>
-</ol>
-
-<div class="notices note" ><p>When securing your application, you want to make sure to only open the ports that your application needs.<br>
-In this example, you removed port 3391 and 443, since you will not be using those ports in these labs. Also, you have locked down the access so that the RDP and ICMP connections can only originate from your public IP address.<br>
-Some customers lock down access so that RDP and ICMP connections can only originate from the public IP addresses of their corporate network.</p>
-</div>
-
 
 
 
@@ -736,60 +712,6 @@ Some customers lock down access so that RDP and ICMP connections can only origin
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -799,6 +721,9 @@ Some customers lock down access so that RDP and ICMP connections can only origin
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -843,6 +768,9 @@ Some customers lock down access so that RDP and ICMP connections can only origin
             
         
                     
+            
+        
+                    
                         
             
             
@@ -858,6 +786,120 @@ Some customers lock down access so that RDP and ICMP connections can only origin
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -871,10 +913,10 @@ Some customers lock down access so that RDP and ICMP connections can only origin
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-prerequisite/" title="Prerequiste"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-prerequisite/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/2-connect-to-rdgw/" title="Connecting to RDGW" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -884,19 +926,19 @@ Some customers lock down access so that RDP and ICMP connections can only origin
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1610759612"></script>
-    <script src="/js/jquery.sticky.js?1610759612"></script>
-    <script src="/js/featherlight.min.js?1610759612"></script>
-    <script src="/js/highlight.pack.js?1610759612"></script>
+    <script src="/js/clipboard.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625549313"></script>
+    <script src="/js/jquery.sticky.js?1625549313"></script>
+    <script src="/js/featherlight.min.js?1625549313"></script>
+    <script src="/js/highlight.pack.js?1625549313"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1610759612"></script>
-    <script src="/js/learn.js?1610759612"></script>
-    <script src="/js/hugo-learn.js?1610759612"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625549313"></script>
+    <script src="/js/learn.js?1625549313"></script>
+    <script src="/js/hugo-learn.js?1625549313"></script>
 
-    <link href="/mermaid/mermaid.css?1610759612" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1610759612"></script>
+    <link href="/mermaid/mermaid.css?1625549313" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625549313"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

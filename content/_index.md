@@ -1,18 +1,27 @@
 +++
-title = "Hybrid DNS with Route53 Resolver"
+title = "Hybrid DNS với Route53 Resolver"
 date = 2020
 weight = 1
 chapter = false
 +++
 
-# **Implement Hybrid DNS with Route53 Resolver**
+# Thiết lập Hybrid DNS với Route 53 Resolver
 
-Most customers have an on-premises DNS infrastructure. When you create resources in AWS, AWS provides DNS services provided by Amazon Route 53. In this lab, you will get hands-on experience with creating a hybrid DNS infrastructure which allows you to integrate your on-premises DNS infrastructure with Amazon Route 53 DNS.
+#### Tổng quan
 
-Route 53 provides a number of DNS capabilities such as: public DNS domain registration, ability to create private DNS zones, hybrid DNS tools, and DNS name resolution. With DNS name resolution, Route 53 Resolver can perform recursive lookups against public name servers.
+Đa số các khách hàng hiện tại đang sở hữu một cơ sở hệ thống DNS on-premise. Khi bạn khởi tạo các tài nguyên trên nền tảng AWS, AWS có cung cấp dịch vụ DNS thông qua **Amazon Route 53**. Trong bài lab lần này, chúng ta sẽ tiến hành trải nghiệm bằng việc xây dựng hệ thống DNS hybrid nhằm cho phép bạn tích hợp với hệ thống DNS on-premise hiện tại với dịch vụ DNS của **Amazon Route 53**.
 
-Within Route 53, the Route 53 Resolver service provides three tools to enable hybrid DNS architecture between your on-premises DNS infrastructure and AWS. These three tools are:
+#### Route 53
 
-* **Outbound Endpoints**: DNS queries from Route 53 Resolver for your on-premises DNS infrastructure will originate from outbound endpoints.
-* **Inbound Endpoints**: Inbound endpoints serve as targets for DNS queries from your on-premises DNS infrastructure for DNS domains hosted in AWS.
-* **Route 53 Resolver Rules**: With Route 53 Resolver Rules, you can configure Route 53 to forward DNS queries for your specific DNS domains to on-premises DNS servers.
+**Route 53** cung cấp một số khả năng của DNS như: đăng ký miền DNS công cộng, khả năng tạo vùng DNS riêng, công cụ DNS hybrid và phân giải tên miền. Với tính năng phân giải tên miền, Route 53 Resolver có thể thực hiện tra cứu đệ quy đối với các hệ thống DNS công cộng.
+
+Trong Route 53, dịch vụ Route 53 Resolver cung cấp ba công cụ để kích hoạt kiến trúc DNS hybrid giữa cơ sở hệ thống DNS on-premise của bạn và AWS. Ba công cụ này là:
+
+* **Outbound Endpoints**: Các truy vấn DNS từ Route 53 Resolver đến hệ thống DNS on-premise của bạn sẽ được gửi đi từ Outbound Endpoints.
+* **Inbound Endpoints**: Inbound endpoints đóng vai trò là mục tiêu cho các truy vấn DNS từ hệ thống DNS on-premise của bạn đến các tên miền được lưu trữ trên AWS.
+* **Route 53 Resolver Rules**: Với Route 53 Resolver Rules, bạn có thể cấu hình Route 53 để chuyển tiếp các truy vấn DNS cho các tên miền cụ thể của bạn tới hệ thống DNS on-premise.
+
+#### Nội dung:
+1. [Các bước chuẩn bị](1-prerequisite)
+2. [Thiết lập Hybrid DNS](2-implement-hybrid-dns)
+3. [Dọn dẹp tài nguyên](3-clean-up)

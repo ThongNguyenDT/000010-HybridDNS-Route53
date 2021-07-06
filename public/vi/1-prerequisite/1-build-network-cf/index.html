@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Xây dựng hạ tầng với CloudFormation :: Thiết lập Hybrid DNS với Route 53 Resolver</title>
+    <title>Chuẩn bị hạ tầng :: Thiết lập Hybrid DNS với Route 53 Resolver</title>
 
     
-    <link href="/css/nucleus.css?1610759612" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1610759612" rel="stylesheet">
-    <link href="/css/hybrid.css?1610759612" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1610759612" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1610759612" rel="stylesheet">
-    <link href="/css/auto-complete.css?1610759612" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1610759612" rel="stylesheet">
-    <link href="/css/theme.css?1610759612" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1610759612" rel="stylesheet">
+    <link href="/css/nucleus.css?1625549313" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625549313" rel="stylesheet">
+    <link href="/css/hybrid.css?1625549313" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625549313" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625549313" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625549313" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625549313" rel="stylesheet">
+    <link href="/css/theme.css?1625549313" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625549313" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1610759612" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625549313" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1610759612"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625549313"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1610759612"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1610759612"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625549313"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625549313"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1610759612"></script>
+<script type="text/javascript" src="/js/search.js?1625549313"></script>
 
     
   </div>
@@ -113,18 +113,114 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/" title="Xây dựng hạ tầng với CloudFormation" class="dd-item 
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/" title="Chuẩn bị hạ tầng" class="dd-item 
         
         active
         
         ">
       <a href="/vi/1-prerequisite/1-build-network-cf/">
-          <b>1.1. </b>Xây dựng hạ tầng với CloudFormation
+          <b>1.1. </b>Chuẩn bị hạ tầng
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/">
+          <b>1.1.1 </b>Tạo Key Pair
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.2-quick-start/" title="CloudFormation Quick Start" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.2-quick-start/">
+          <b>1.1.2 </b>CloudFormation Quick Start
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/1-build-network-cf/1.1.3-security-setup/">
+          <b>1.1.3 </b>Thiết lập bảo mật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -204,12 +300,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/">
+      <a href="/vi/2-implement-hybrid-dns/">
           <b>2. </b>Thiết lập Hybrid DNS
           
             <i class="fas fa-check read-icon"></i>
@@ -235,12 +331,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/1-outbound-endpoint/">
+      <a href="/vi/2-implement-hybrid-dns/1-outbound-endpoint/">
           <b>2.1. </b>Tạo Outbound Endpoint
           
             <i class="fas fa-check read-icon"></i>
@@ -263,12 +359,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/2-route53-rule/">
+      <a href="/vi/2-implement-hybrid-dns/2-route53-rule/">
           <b>2.2. </b>Tạo Route 53 Resolver Rule
           
             <i class="fas fa-check read-icon"></i>
@@ -291,12 +387,12 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/3-inbound-endpoint/">
+      <a href="/vi/2-implement-hybrid-dns/3-inbound-endpoint/">
           <b>2.3. </b>Tạo Inbound Endpoint
           
             <i class="fas fa-check read-icon"></i>
@@ -319,13 +415,13 @@
  
   
     
-    <li data-nav-id="/vi/2-impletement-hybrid-dns/4-testing-result/" title="Thử nghiệm kết quả" class="dd-item 
+    <li data-nav-id="/vi/2-implement-hybrid-dns/4-testing-result/" title="Kiểm tra kết quả" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-impletement-hybrid-dns/4-testing-result/">
-          <b>2.4. </b>Thử nghiệm kết quả
+      <a href="/vi/2-implement-hybrid-dns/4-testing-result/">
+          <b>2.4. </b>Kiểm tra kết quả
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,6 +436,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-clean-up/">
+          <b>3. </b>Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -427,11 +549,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7834843&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -474,7 +596,7 @@
             
           
           
-            <a href='/vi/'>Hybrid DNS với Route53 Resolver</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Xây dựng hạ tầng với CloudFormation
+            <a href='/vi/'>Hybrid DNS với Route53 Resolver</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Chuẩn bị hạ tầng
           
         
           
@@ -511,7 +633,7 @@
           
             <h1>
               
-              Xây dựng hạ tầng với CloudFormation
+              Chuẩn bị hạ tầng
             </h1>
           
 
@@ -519,166 +641,15 @@
 
 
 
-	<p>Bước đầu tiên bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng <a href="https://aws.amazon.com/quickstart/architecture/rd-gateway/"><strong>AWS Quick Start</strong></a> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật.</p>
-<p>AWS Quick Starts sử dụng AWS CloudFormation là dịch vụ Infrastructure as Code (IaC) của AWS cho phép bạn tạo hạ tầng dựa trên template (được viết bằng YAML hoặc JSON). Template được tải lên dịch vụ CloudFormation và tự động tạo cơ sở hạ tầng được mô tả trong template.</p>
-<p><img src="../../../images/1/0-diagram.png?width=40pc" alt="Overview Diagram"></p>
+	<h4 id="tổng-quan">Tổng quan</h4>
+<p>Ở bước này, bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng <a href="https://aws.amazon.com/quickstart/architecture/rd-gateway/"><strong>template</strong></a> từ <strong>AWS Quick Start</strong> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật bằng <strong>AWS CloudFormation</strong>. Đây là kiến trúc sẽ được xây dựng từ template.</p>
+<p><img src="../../../images/1/Architecture-1.1_CFN.png?width=40pc" alt="Overview Diagram"></p>
 <p><strong>Nội dung:</strong></p>
 <ul>
-<li><a href="#111-t%E1%BA%A1o-key-pair">1.1.1. Tạo Key Pair</a></li>
-<li><a href="#112-kh%E1%BB%9Fi-ch%E1%BA%A1y-template-cloudformation-quick-start">1.1.2. Khởi chạy Template CloudFormation Quick Start</a></li>
-<li><a href="#113-thi%E1%BA%BFt-l%E1%BA%ADp-b%E1%BA%A3o-m%E1%BA%ADt">1.1.3. Thiết lập bảo mật</a></li>
+<li><a href="1.1.1-create-keypair/">1.1.1. Tạo Key Pair</a></li>
+<li><a href="1.1.2-quick-start/">1.1.2. Khởi chạy Template CloudFormation Quick Start</a></li>
+<li><a href="1.1.3-security-setup/">1.1.3. Thiết lập bảo mật</a></li>
 </ul>
-<h4 id="111-tạo-key-pair">1.1.1. Tạo Key Pair</h4>
-<p>Để đảm bảo truy cập an toàn vào các EC2 instance, AWS sử dụng private/public key có dạng một cặp khóa. Với các Windows instance, key pair được sử dụng để lấy mật khẩu administrator qua Amazon EC2 console. Trong phần này, bạn sẽ tạo key pair.</p>
-<ol>
-<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>EC2 Management console</strong> thông qua khung tìm kiếm và tìm <strong>&ldquo;EC2&rdquo;</strong>.</li>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn Asia Pacfic (Tokyo))</li>
-<li>Ở menu bên trái, chọn <strong>Key Pairs</strong>.</li>
-<li>Chọn <strong>Create key pair</strong>.</li>
-<li>Ở màn hình <strong>Create Key pair</strong>,
-<ul>
-<li>Ở <strong>Name</strong>, nhập &ldquo;hybrid-dns&rdquo;. (hay tên nào mà bạn mong muốnmuốn)</li>
-<li>Ở <strong>File format</strong>, chọn pem.</li>
-<li>Chọn <strong>Create key pair</strong>.
-<img src="../../../images/1/1-keypair.png?width=90pc" alt="Create Key Pair"></li>
-</ul>
-</li>
-<li><strong>Quan trọng</strong>: Chúng ta tải từ AWS key private của key pair với tên file <strong>hybrid-dns.pem</strong>. Hãy đảm bảo bạn đã lưu file PEM và nhớ vị trí lưu. Bạn sẽ phải dùng nó để giải mã password của administrator. Chúng ta không thể tải lại file key này.</li>
-</ol>
-<h4 id="112-khởi-chạy-template-cloudformation-quick-start">1.1.2. Khởi chạy Template CloudFormation Quick Start</h4>
-<p>In this section, you are going to get hands-on experience with AWS CloudFormation to build out the base network infrastructure.
-Trong phần này, bạn sẽ có trải nghiệm thực tế với AWS CloudFormation để xây dựng hạ tầng mạng.</p>
-<ol>
-<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>CloudFormation (CFN) console</strong> thông qua khung tìm kiếm và tìm <strong>CloudFormation</strong>.</li>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn Asia Pacfic (Tokyo))</li>
-<li>Chọn <strong>Create stack</strong> &gt; <strong>With new resources (standard)</strong></li>
-<li>Ở màn hình <strong>Create stack</strong>, nhập nội dung bên dưới và chọn <strong>Next</strong>.
-<ul>
-<li><strong>Prepare Template</strong>: Template is ready</li>
-<li><strong>Template Source</strong>: Amazon S3 URL</li>
-<li><strong>Amazon S3 URL</strong>:</li>
-</ul>
-</li>
-</ol>
-<pre><code>https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template
-</code></pre><p>Hoặc tải Template ở phía dưới:
-
-<section class="attachments orange">
-	<label>
-		<i class="fas fa-paperclip" aria-hidden="true"></i>
-		CloudFormation Template
-	</label>
-	
-		
-	
-	<div class="attachments-files">
-	
-		
-		
-			
-				<li>
-					<a href="/1-prerequisite/1-build-network-cf/_index.vi.files/rdgw-master.template" >
-						rdgw-master.template
-					</a>
-					(9 ko)
-				</li>
-			
-		
-	
-	<div>
-	
-</section>
-
-</p>
-<p><img src="../../../images/1/2-createstack.png?width=90pc" alt="Create Stack"></p>
-<ol start="5">
-<li>
-<p>Ở <strong>Stack name</strong>, nhập HybridDNS.</p>
-</li>
-<li>
-<p>Ở <strong>Availability Zones</strong>, chọn ap-northeast-1a và ap-northeast-1c.</p>
-</li>
-<li>
-<p>Ở <strong>VPC CIDR</strong>, Private Subnet 1 &amp; 2 CIDR, và Public Subnet 1 &amp; 2 CIDR, giữ các giá trị mặc định.
-<img src="../../../images/1/2-createstack2.png?width=90pc" alt="Create Stack"></p>
-</li>
-<li>
-<p>Ở <strong>Allowed Remote Desktop Gateway External Access CIDR</strong>, nhập 0.0.0.0/0. 
-
-<div class="notices warning" ><p>Thiết lập này sẽ cho phép bất kỳ IP nào cũng có thể Remote vào cổng RDP. 
-Đây không phải là cấu hình an toàn và nó không được khuyến nghị khi triển khai ở môi trường production. Chúng ta sẽ quay lại và siết chặt quyền truy cập sau khi CloudFormation stack đã được triển khai.</p>
-</div>
-</p>
-</li>
-<li>
-<p>Trong <strong>Key Pair Name</strong>, chọn Key Pair đã tạo trước đó (hybrid-dns).</p>
-</li>
-<li>
-<p>Ở <strong>Remote Desktop Gateway Instance Type</strong>, giữ giá trị mặc định (t2.large).</p>
-</li>
-<li>
-<p>Ở <strong>Number of RDGW Hosts</strong>, giữ giá trị mặc định (1).<br>
-
-<div class="notices note" ><p>Ở Diagram phía trên thể hiện hai RDGW host (một host mỗi Availablity Zone (AZ)).<br>
-Với mục tiêu làm thực hành, chúng ta sẽ bắt đầu với một RDGW host để giảm thời gian CloudFormation chạy khởi tạo. Tuy nhiên, theo như diagram, bạn có thể thấy RDGW host được triển khai vào Autoscaling Group.
-Sau khi CloudFormation stack triển khai hoàn thành, bạn có thể thử cấu hình AutoScaling group. AutoScaling group là dịch vụ chủ chốt cung cấp tính sẵn sàng và mở rộng cho ứng dụng của bạn.</p>
-</div>
-</p>
-</li>
-<li>
-<p>Ở <strong>Admin User Name</strong>, giữ giá trị mặc định (StackAdmin).</p>
-</li>
-<li>
-<p>Ở <strong>Admin Password</strong>, thiết lập mật khẩu dễ nhớ cho bạn. 
-
-<div class="notices note" ><p>Mật khẩu yêu cầu phải đủ độ phức tạp (tối thiểu 8 ký tự và bao gồm cả ký tự chữ, ký tự số và ký tự đặc biệt).</p>
-</div>
-</p>
-</li>
-<li>
-<p>Ở <strong>Domain DNS Name</strong>, giữ giá trị mặc định (example.com).</p>
-</li>
-<li>
-<p>Ở các lựa chọn khác, giữ giá trị mặc định và chọn <strong>Next</strong>.
-<img src="../../../images/1/2-createstack3.png?width=90pc" alt="Create Stack"></p>
-</li>
-<li>
-<p>Ở <strong>Configure Stack Options</strong>, kiểm tra lại các lựa chọn. Chọn <strong>Next</strong>.</p>
-</li>
-<li>
-<p>Ở màn hình <strong>Review HybridDNS</strong>, kiểm tra lại thiết lập. Chọn vào hai lựa checkbox và chọn <strong>Create Stack</strong>.
-<img src="../../../images/1/2-createstack4.png?width=90pc" alt="Create Stack"></p>
-</li>
-</ol>
-
-<div class="notices info" ><p>Template mất khoảng 15 phút để hoàn thành. Trong thời gian này, chúng ta sẽ xem xét những gì mà template CloudFormation sẽ tạo.
-Sau khi hoàn thành khởi tạo stack, trạng thái stack sẽ thay đổi thành <strong>CREATE_COMPLETE</strong>.</p>
-</div>
-
-<p><img src="../../../images/1/2-createstack5.png?width=90pc" alt="Create Stack"></p>
-<h4 id="113-thiết-lập-bảo-mật">1.1.3. Thiết lập bảo mật</h4>
-<p>Chúng ta sẽ siết chặt quyền truy cập RDGW host.</p>
-<ol>
-<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>EC2 Management console</strong> thông qua khung tìm kiếm và tìm <strong>&ldquo;EC2&rdquo;</strong>.</li>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn Asia Pacfic (Tokyo))</li>
-<li>Ở menu bên trái, chọn <strong>Security Groups</strong>.</li>
-<li>Chọn vào checkbox của security group có phần mô tả là <strong>“Enable RDP access from the Internet”</strong></li>
-<li>Ở khu vực phía dưới màn hình, chọn tab <strong>Inbound</strong>.</li>
-<li>Chọn <strong>Edit</strong>.
-<img src="../../../images/1/3-secureenvironment.png?width=90pc" alt="Secure Environment"></li>
-<li>Chọn vào <strong>Delete</strong> ở kế rule có nội dung <strong>Port Range, 3391</strong> để xóa rule</li>
-<li>Chọn vào <strong>Delete</strong> ở kế rule có nội dung <strong>Port Range, 443</strong> để xóa rule</li>
-<li>Ở <strong>RDP rule</strong> trong cột <strong>Source</strong>, chọn ở danh sách <strong>“My IP”</strong></li>
-<li>Ở <strong>ICMP rule</strong> trong cột <strong>Source</strong>, chọn ở danh sách <strong>“My IP”</strong></li>
-<li>Chọn <strong>Save</strong>
-<img src="../../../images/1/3-secureenvironment2.png?width=90pc" alt="Secure Environment"></li>
-</ol>
-
-<div class="notices note" ><p>Khi bảo mật ứng dụng của mình, bạn cần đảm bảo chỉ mở các cổng mà ứng dụng của bạn cần.<br>
-Trong ví dụ này, bạn đã xóa cổng 3391 và 443, vì bạn sẽ không sử dụng các cổng đó trong bài thực hành này. Ngoài ra, bạn đã khóa quyền truy cập để các kết nối RDP và ICMP chỉ có thể bắt nguồn từ địa chỉ IP public của bạn.<br>
-Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết nối RDP và ICMP chỉ có thể bắt nguồn từ các địa chỉ IP public của hệ thống mạng công ty của họ.</p>
-</div>
-
 
 
 
@@ -741,60 +712,6 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -804,6 +721,9 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -848,6 +768,9 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
             
         
                     
+            
+        
+                    
                         
             
             
@@ -863,6 +786,120 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -879,7 +916,7 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
 			<a class="nav nav-prev" href="/vi/1-prerequisite/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-prerequisite/2-connect-to-rdgw/" title="Kết nối đến RDGW" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -889,19 +926,19 @@ Một số khách hàng khóa quyền truy cập nhằm hạn chế các kết n
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1610759612"></script>
-    <script src="/js/jquery.sticky.js?1610759612"></script>
-    <script src="/js/featherlight.min.js?1610759612"></script>
-    <script src="/js/highlight.pack.js?1610759612"></script>
+    <script src="/js/clipboard.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625549313"></script>
+    <script src="/js/jquery.sticky.js?1625549313"></script>
+    <script src="/js/featherlight.min.js?1625549313"></script>
+    <script src="/js/highlight.pack.js?1625549313"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1610759612"></script>
-    <script src="/js/learn.js?1610759612"></script>
-    <script src="/js/hugo-learn.js?1610759612"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625549313"></script>
+    <script src="/js/learn.js?1625549313"></script>
+    <script src="/js/hugo-learn.js?1625549313"></script>
 
-    <link href="/mermaid/mermaid.css?1610759612" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1610759612"></script>
+    <link href="/mermaid/mermaid.css?1625549313" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625549313"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

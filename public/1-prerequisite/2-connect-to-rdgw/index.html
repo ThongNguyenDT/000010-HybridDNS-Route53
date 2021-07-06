@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Connecting to RDGW :: Implement Hybrid DNS with Route53 Resolver</title>
+    <title>Kết nối đến RDGW :: Implement Hybrid DNS with Route53 Resolver</title>
 
     
-    <link href="/css/nucleus.css?1610759612" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1610759612" rel="stylesheet">
-    <link href="/css/hybrid.css?1610759612" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1610759612" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1610759612" rel="stylesheet">
-    <link href="/css/auto-complete.css?1610759612" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1610759612" rel="stylesheet">
-    <link href="/css/theme.css?1610759612" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1610759612" rel="stylesheet">
+    <link href="/css/nucleus.css?1625549313" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625549313" rel="stylesheet">
+    <link href="/css/hybrid.css?1625549313" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625549313" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625549313" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625549313" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625549313" rel="stylesheet">
+    <link href="/css/theme.css?1625549313" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625549313" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1610759612" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625549313" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1610759612"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625549313"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1610759612"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1610759612"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625549313"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625549313"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1610759612"></script>
+<script type="text/javascript" src="/js/search.js?1625549313"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/" title="Prerequiste" class="dd-item 
+    <li data-nav-id="/1-prerequisite/" title="Các bước chuẩn bị" class="dd-item 
         parent
         
         
         ">
       <a href="/1-prerequisite/">
-          <b>1. </b>Prerequiste
+          <b>1. </b>Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,104 +113,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/" title="Build Network with CloudFormation" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/" title="Chuẩn bị hạ tầng" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/1-build-network-cf/">
-          <b>1.1. </b>Build Network with CloudFormation
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/2-connect-to-rdgw/" title="Connecting to RDGW" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/1-prerequisite/2-connect-to-rdgw/">
-          <b>1.2. </b>Connecting to RDGW
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/3-deploy-mad/" title="Deploy Microsoft AD" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/3-deploy-mad/">
-          <b>1.3. </b>Deploy Microsoft AD
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-impletement-hybrid-dns/" title="Setting Up Hybrid DNS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-impletement-hybrid-dns/">
-          <b>2. </b>Setting Up Hybrid DNS
+          <b>1.1. </b>Chuẩn bị hạ tầng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -235,13 +144,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/1-outbound-endpoint/" title="Config Outbound Endpoint" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/1-outbound-endpoint/">
-          <b>2.1. </b>Config Outbound Endpoint
+      <a href="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/">
+          <b>1.1.1 </b>Tạo Key Pair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -263,13 +172,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/2-route53-rule/" title="Config Route53 Resolver Rules" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/" title="CloudFormation Quick Start" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/2-route53-rule/">
-          <b>2.2. </b>Config Route53 Resolver Rules
+      <a href="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/">
+          <b>1.1.2 </b>CloudFormation Quick Start
           
             <i class="fas fa-check read-icon"></i>
           
@@ -291,41 +200,13 @@
  
   
     
-    <li data-nav-id="/2-impletement-hybrid-dns/3-inbound-endpoint/" title="Config Inbound Endpoint" class="dd-item 
+    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật" class="dd-item 
         
         
         
         ">
-      <a href="/2-impletement-hybrid-dns/3-inbound-endpoint/">
-          <b>2.3. </b>Config Inbound Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-impletement-hybrid-dns/4-testing-result/" title="Testing Result" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-impletement-hybrid-dns/4-testing-result/">
-          <b>2.4. </b>Testing Result
+      <a href="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/">
+          <b>1.1.3 </b>Thiết lập bảo mật
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,6 +221,247 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/2-connect-to-rdgw/" title="Kết nối đến RDGW" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/1-prerequisite/2-connect-to-rdgw/">
+          <b>1.2. </b>Kết nối đến RDGW
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/3-deploy-mad/" title="Triển khai Microsoft AD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/3-deploy-mad/">
+          <b>1.3. </b>Triển khai Microsoft AD
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/">
+          <b>2. </b>Thiết lập Hybrid DNS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/1-outbound-endpoint/">
+          <b>2.1. </b>Tạo Outbound Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/2-route53-rule/">
+          <b>2.2. </b>Tạo Route 53 Resolver Rule
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/3-inbound-endpoint/">
+          <b>2.3. </b>Tạo Inbound Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-implement-hybrid-dns/4-testing-result/" title="Kiểm tra kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-implement-hybrid-dns/4-testing-result/">
+          <b>2.4. </b>Kiểm tra kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-clean-up/">
+          <b>3. </b>Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -427,11 +549,11 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7834843&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -474,7 +596,7 @@
             
           
           
-            <a href='/'>Hybrid DNS with Route53 Resolver</a> > <a href='/1-prerequisite/'>Prerequiste</a> > Connecting to RDGW
+            <a href='/'>Hybrid DNS với Route53 Resolver</a> > <a href='/1-prerequisite/'>Các bước chuẩn bị</a> > Kết nối đến RDGW
           
         
           
@@ -511,7 +633,7 @@
           
             <h1>
               
-              Connecting to RDGW
+              Kết nối đến RDGW
             </h1>
           
 
@@ -519,27 +641,28 @@
 
 
 
-	<p><strong>Contents:</strong></p>
+	<p>Tiếp theo, bạn sẽ đăng nhập vào instance Remote Desktop Gateway Server (RDGW) bằng Remote Desktop Protocol (RDP). Nếu bạn kết nối từ máy tính Windows, RDP sẽ có sẵn. Nếu bạn đang sử dụng máy Mac, vui lòng tải xuống ứng dụng RDP <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">tại đây</a>.</p>
+<p><strong>Nội dung:</strong></p>
 <ul>
 <li><a href="#remote-desktop-gateway-server">Remote Desktop Gateway Server</a></li>
 </ul>
 <h4 id="remote-desktop-gateway-server">Remote Desktop Gateway Server</h4>
-<p>You will next login to the Remote Desktop Gateway Server (RDGW) server using Remote Desktop Protocol (RDP). If you connecting from a Windows computer, RDP should be already present. If you are using a Mac, please download the RDP client <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">here</a>.</p>
 <ol>
-<li>Log in to the <strong>AWS Console</strong> and go to <strong>Elastic Compute Cloud (EC2) console</strong>.</li>
-<li>On the left hand menu, select <strong>Instances</strong>.</li>
-<li>Select the checkbox near to the RDGW server.</li>
-<li>Click the <strong>Connect</strong> button. Click the <strong>“Download Remote Desktop File”</strong> to download the <strong>RDP file</strong>.</li>
-<li>Click the <strong>Get Password</strong> button.</li>
-<li>Click the <strong>Choose File</strong> button and browse to the location of the key pair file that you downloaded earlier.</li>
+<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>EC2 Management console</strong></li>
+<li>Ở menu bên trái, chọn <strong>Instances</strong>.</li>
+<li>Chọn checkbox ở vị trí máy chủ RDGW.</li>
+<li>Chọn <strong>Connect</strong>.</li>
+<li>Chọn <strong>RDP Client</strong> và chọn <strong>“Download Remote Desktop File”</strong> để tải tập tin <strong>RDP</strong>.</li>
+<li>Chọn <strong>Get Password</strong>.</li>
+<li>Chọn <strong>Browse</strong> và trỏ đến vị trí tập tin key pair chúng ta đã tải trước đó.
+<img src="../../../images/1/1.2_Connect.png?width=90pc" alt="1.2_Connect"></li>
+<li>Chọn <strong>Decrypt Password</strong>.</li>
+<li>Khi đã có mật khẩu được giải mã, sao chép và lưu lại.</li>
+<li>Khởi chạy tập tin RDP đã tải và sử dụng mật khẩu ở trên để đăng nhập vào máy chủ RDGW.
+<img src="../../../images/1/1.2_ConnectRDP.png?width=90pc" alt="1.2_ConnectRDP"></li>
+<li>Đây là màn hình kết nối vào instance thành công:
+<img src="../../../images/1/1.2_WindowScreen.png?width=90pc" alt="1.2_WindowScreen"></li>
 </ol>
-<p><img src="../../../images/1/4-remotetordgw.png?width=90pc" alt="Remote to Gateway"></p>
-<ol start="7">
-<li>Click <strong>Decrypt Password</strong>.</li>
-<li>Once the password is decrypted, copy it to the clipboard.</li>
-<li>Double click the RDP connection file that you downloaded and paste the password from the clipboard into the password field.</li>
-</ol>
-<p><img src="../../../images/1/4-remotetordgw2.png?width=90pc" alt="Remote to Gateway"></p>
 
 
 
@@ -604,8 +727,58 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -727,6 +900,22 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -740,10 +929,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-prerequisite/1-build-network-cf/" title="Build Network with CloudFormation"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/3-deploy-mad/" title="Deploy Microsoft AD" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/3-deploy-mad/" title="Triển khai Microsoft AD" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -753,19 +942,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.min.js?1610759612"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1610759612"></script>
-    <script src="/js/jquery.sticky.js?1610759612"></script>
-    <script src="/js/featherlight.min.js?1610759612"></script>
-    <script src="/js/highlight.pack.js?1610759612"></script>
+    <script src="/js/clipboard.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625549313"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625549313"></script>
+    <script src="/js/jquery.sticky.js?1625549313"></script>
+    <script src="/js/featherlight.min.js?1625549313"></script>
+    <script src="/js/highlight.pack.js?1625549313"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1610759612"></script>
-    <script src="/js/learn.js?1610759612"></script>
-    <script src="/js/hugo-learn.js?1610759612"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625549313"></script>
+    <script src="/js/learn.js?1625549313"></script>
+    <script src="/js/hugo-learn.js?1625549313"></script>
 
-    <link href="/mermaid/mermaid.css?1610759612" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1610759612"></script>
+    <link href="/mermaid/mermaid.css?1625549313" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625549313"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
