@@ -1,5 +1,5 @@
 +++
-title = "CloudFormation Quick Start"
+title = "AWS Quick Start"
 date = 2021
 weight = 2
 chapter = false
