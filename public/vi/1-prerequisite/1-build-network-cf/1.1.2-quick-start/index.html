@@ -12,21 +12,21 @@
     <title>AWS Quick Start :: Thiết lập Hybrid DNS với Route 53 Resolver</title>
 
     
-    <link href="/css/nucleus.css?1625549537" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1625549537" rel="stylesheet">
-    <link href="/css/hybrid.css?1625549537" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1625549537" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1625549537" rel="stylesheet">
-    <link href="/css/auto-complete.css?1625549537" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1625549537" rel="stylesheet">
-    <link href="/css/theme.css?1625549537" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1625549537" rel="stylesheet">
+    <link href="/css/nucleus.css?1625903498" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1625903498" rel="stylesheet">
+    <link href="/css/hybrid.css?1625903498" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1625903498" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1625903498" rel="stylesheet">
+    <link href="/css/auto-complete.css?1625903498" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1625903498" rel="stylesheet">
+    <link href="/css/theme.css?1625903498" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1625903498" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1625549537" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1625903498" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1625549537"></script>
+    <script src="/js/jquery-3.3.1.min.js?1625903498"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1625549537"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1625549537"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1625903498"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1625903498"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1625549537"></script>
+<script type="text/javascript" src="/js/search.js?1625903498"></script>
 
     
   </div>
@@ -647,20 +647,20 @@
 
 
 
-	<p><img src="../../../images/1/Architecture-1.1_CFN.png?width=40pc" alt="Overview Diagram"></p>
+	<p><img src="/images/1/Architecture-1.1_CFN.png?width=40pc" alt="Overview Diagram"></p>
 <h4 id="khởi-chạy-template-cloudformation-quick-start">Khởi chạy Template CloudFormation Quick Start</h4>
 <p>Trong phần này, bạn sẽ có trải nghiệm thực tế với AWS CloudFormation để xây dựng hạ tầng mạng.</p>
 <ol>
 <li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>CloudFormation (CFN) console</strong> thông qua khung tìm kiếm và tìm <strong>CloudFormation</strong>.</li>
 <li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của AWS Console và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn <strong>ap-southeast-1</strong>)</li>
 <li>Chọn <strong>Create stack</strong> &gt; <strong>With new resources (standard)</strong>
-<img src="../../../images/1/1.1_CreateStack.png?width=90pc" alt="1.1_CreateStack"></li>
+<img src="/images/1/1.1_CreateStack.png?width=90pc" alt="1.1_CreateStack"></li>
 <li>Ở màn hình <strong>Create stack</strong>, nhập nội dung bên dưới và chọn <strong>Next</strong>.
 <ul>
 <li><strong>Prepare Template</strong>: Template is ready</li>
 <li><strong>Template Source</strong>: Amazon S3 URL</li>
 <li><strong>Amazon S3 URL</strong>: <a href="https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template">https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template</a>
-<img src="../../../images/1/1.1_CreateStack1.png?width=90pc" alt="1.1_CreateStack1"></li>
+<img src="/images/1/1.1_CreateStack1.png?width=90pc" alt="1.1_CreateStack1"></li>
 </ul>
 </li>
 </ol>
@@ -693,7 +693,7 @@
 </section>
 
 </p>
-<ol start="5">
+<ol>
 <li>
 <p>Ở <strong>Stack name</strong>, nhập HybridDNS.</p>
 </li>
@@ -702,7 +702,7 @@
 </li>
 <li>
 <p>Ở <strong>VPC CIDR</strong>, Private Subnet 1 &amp; 2 CIDR, và Public Subnet 1 &amp; 2 CIDR, giữ các giá trị mặc định.
-<img src="../../../images/1/1.1_CreateStack2.png?width=90pc" alt="1.1_CreateStack2"></p>
+<img src="/images/1/1.1_CreateStack2.png?width=90pc" alt="1.1_CreateStack2"></p>
 </li>
 <li>
 <p>Ở <strong>Allowed Remote Desktop Gateway External Access CIDR</strong>, nhập 0.0.0.0/0. 
@@ -738,14 +738,14 @@ Sau khi CloudFormation stack triển khai hoàn thành, bạn có thể thử c�
 </li>
 <li>
 <p>Ở các lựa chọn khác, giữ giá trị mặc định và chọn <strong>Next</strong>.
-<img src="../../../images/1/1.1_CreateStack3.png?width=90pc" alt="1.1_CreateStack3"></p>
+<img src="/images/1/1.1_CreateStack3.png?width=90pc" alt="1.1_CreateStack3"></p>
 </li>
 <li>
 <p>Ở <strong>Configure Stack Options</strong>, giữ các lựa chọn mặc định. Chọn <strong>Next</strong>.</p>
 </li>
 <li>
 <p>Ở màn hình <strong>Review HybridDNS</strong>, kiểm tra lại thiết lập. Chọn vào hai lựa checkbox và chọn <strong>Create Stack</strong>.
-<img src="../../../images/1/1.1_CreateStack4.png?width=90pc" alt="1.1_CreateStack4"></p>
+<img src="/images/1/1.1_CreateStack4.png?width=90pc" alt="1.1_CreateStack4"></p>
 </li>
 </ol>
 
@@ -753,7 +753,7 @@ Sau khi CloudFormation stack triển khai hoàn thành, bạn có thể thử c�
 Sau khi hoàn thành khởi tạo stack, trạng thái stack sẽ thay đổi thành <strong>CREATE_COMPLETE</strong>.</p>
 </div>
 
-<p><img src="../../../images/1/1.1_CreateStack5.png?width=90pc" alt="1.1_CreateStack5"></p>
+<p><img src="/images/1/1.1_CreateStack5.png?width=90pc" alt="1.1_CreateStack5"></p>
 
 
 
@@ -1034,19 +1034,19 @@ Sau khi hoàn thành khởi tạo stack, trạng thái stack sẽ thay đổi th
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1625549537"></script>
-    <script src="/js/perfect-scrollbar.min.js?1625549537"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1625549537"></script>
-    <script src="/js/jquery.sticky.js?1625549537"></script>
-    <script src="/js/featherlight.min.js?1625549537"></script>
-    <script src="/js/highlight.pack.js?1625549537"></script>
+    <script src="/js/clipboard.min.js?1625903498"></script>
+    <script src="/js/perfect-scrollbar.min.js?1625903498"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1625903498"></script>
+    <script src="/js/jquery.sticky.js?1625903498"></script>
+    <script src="/js/featherlight.min.js?1625903498"></script>
+    <script src="/js/highlight.pack.js?1625903498"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1625549537"></script>
-    <script src="/js/learn.js?1625549537"></script>
-    <script src="/js/hugo-learn.js?1625549537"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1625903498"></script>
+    <script src="/js/learn.js?1625903498"></script>
+    <script src="/js/hugo-learn.js?1625903498"></script>
 
-    <link href="/mermaid/mermaid.css?1625549537" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1625549537"></script>
+    <link href="/mermaid/mermaid.css?1625903498" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1625903498"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

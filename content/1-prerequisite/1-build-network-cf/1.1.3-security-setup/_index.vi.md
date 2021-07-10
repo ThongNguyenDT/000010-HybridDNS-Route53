@@ -7,7 +7,7 @@ pre = "<b>1.1.3 </b>"
 +++
 
 
-![Overview Diagram](../../../images/1/Architecture-1.1_CFN.png?width=40pc)
+![Overview Diagram](/images/1/Architecture-1.1_CFN.png?width=40pc)
 
 
 #### Thiết lập bảo mật
@@ -19,7 +19,7 @@ Trong bước này, chúng ta sẽ siết chặt quyền truy cập RDGW host.
 4. Chọn vào checkbox của security group có phần mô tả là **“Enable RDP access from the Internet”**
 5. Ở khu vực phía dưới màn hình, chọn tab **Inbound**.
 6. Chọn **Edit inbound rules**.
-![1.1_SG](../../../images/1/1.1_SG.png?width=90pc)
+![1.1_SG](/images/1/1.1_SG.png?width=90pc)
 7. Chọn vào **Delete** ở kế rule có nội dung **Port Range, 3391** để xóa rule
 8. Chọn vào **Delete** ở kế rule có nội dung **Port Range, 443** để xóa rule
 9. Ở **RDP rule** trong cột **Source**, chọn ở danh sách **“My IP”**
