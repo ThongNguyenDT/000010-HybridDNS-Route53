@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Hybrid DNS với Route53 Resolver :: Implement Hybrid DNS with Route53 Resolver</title>
+    <title>Set up Hybrid DNS with Route 53 Resolver :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1625903498" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1625903498" rel="stylesheet">
-    <link href="/css/hybrid.css?1625903498" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1625903498" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1625903498" rel="stylesheet">
-    <link href="/css/auto-complete.css?1625903498" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1625903498" rel="stylesheet">
-    <link href="/css/theme.css?1625903498" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1625903498" rel="stylesheet">
+    <link href="/css/nucleus.css?1655392259" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1655392259" rel="stylesheet">
+    <link href="/css/hybrid.css?1655392259" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1655392259" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1655392259" rel="stylesheet">
+    <link href="/css/auto-complete.css?1655392259" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1655392259" rel="stylesheet">
+    <link href="/css/theme.css?1655392259" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1655392259" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1625903498" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1655392259" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1625903498"></script>
+    <script src="/js/jquery-3.3.1.min.js?1655392259"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1625903498"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1625903498"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1655392259"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1655392259"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1625903498"></script>
+<script type="text/javascript" src="/js/search.js?1655392259"></script>
 
     
   </div>
@@ -82,13 +82,39 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/1-prerequisite/">
-          <b>1. </b>Các bước chuẩn bị
+      <a href="/1-introduce/">
+           <b> 1. </b> Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/">
+           <b> 2. </b> Preparation 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,44 +139,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/" title="Chuẩn bị hạ tầng" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createkeypair/" title="Generate Key Pair" class="dd-item 
         
         
         
         ">
-      <a href="/1-prerequisite/1-build-network-cf/">
-          <b>1.1. </b>Chuẩn bị hạ tầng
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/" title="Tạo Key Pair" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/1-build-network-cf/1.1.1-create-keypair/">
-          <b>1.1.1 </b>Tạo Key Pair
+      <a href="/2-prerequiste/2.1-createkeypair/">
+           <b> 2.1 </b> Generate Key Pair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -172,13 +167,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/" title="AWS Quick Start" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-launchcloudformation/" title="Initialize CloudFormation Template" class="dd-item 
         
         
         
         ">
-      <a href="/1-prerequisite/1-build-network-cf/1.1.2-quick-start/">
-          <b>1.1.2 </b>AWS Quick Start
+      <a href="/2-prerequiste/2.2-launchcloudformation/">
+           <b> 2.2 </b> Initialize CloudFormation Template
           
             <i class="fas fa-check read-icon"></i>
           
@@ -200,78 +195,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/" title="Thiết lập bảo mật" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-security/" title="Configuring Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/1-prerequisite/1-build-network-cf/1.1.3-security-setup/">
-          <b>1.1.3 </b>Thiết lập bảo mật
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/2-connect-to-rdgw/" title="Kết nối đến RDGW" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/2-connect-to-rdgw/">
-          <b>1.2. </b>Kết nối đến RDGW
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/1-prerequisite/3-deploy-mad/" title="Triển khai Microsoft AD" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/1-prerequisite/3-deploy-mad/">
-          <b>1.3. </b>Triển khai Microsoft AD
+      <a href="/2-prerequiste/2.3-security/">
+           <b> 2.3 </b> Configuring Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -300,13 +230,65 @@
  
   
     
-    <li data-nav-id="/2-implement-hybrid-dns/" title="Thiết lập Hybrid DNS" class="dd-item 
+    <li data-nav-id="/3-connecttordgw/" title="Connecting to RDGW" class="dd-item 
         
         
         
         ">
-      <a href="/2-implement-hybrid-dns/">
-          <b>2. </b>Thiết lập Hybrid DNS
+      <a href="/3-connecttordgw/">
+           <b> 3. </b> Connecting to RDGW
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-setupad/" title="Microsoft AD Deployment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-setupad/">
+           <b> 4. </b> Microsoft AD Deployment
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-setuphyriddns/" title="Setup DNS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-setuphyriddns/">
+           <b> 5. </b> Setup DNS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -331,13 +313,13 @@
  
   
     
-    <li data-nav-id="/2-implement-hybrid-dns/1-outbound-endpoint/" title="Tạo Outbound Endpoint" class="dd-item 
+    <li data-nav-id="/5-setuphyriddns/5.1-createoe/" title="Create Route 53 Outbound Endpoint" class="dd-item 
         
         
         
         ">
-      <a href="/2-implement-hybrid-dns/1-outbound-endpoint/">
-          <b>2.1. </b>Tạo Outbound Endpoint
+      <a href="/5-setuphyriddns/5.1-createoe/">
+           <b> 5.1 </b> Create Route 53 Outbound Endpoint
           
             <i class="fas fa-check read-icon"></i>
           
@@ -359,13 +341,13 @@
  
   
     
-    <li data-nav-id="/2-implement-hybrid-dns/2-route53-rule/" title="Tạo Route 53 Resolver Rule" class="dd-item 
+    <li data-nav-id="/5-setuphyriddns/5.2-createroute53/" title="Create Route 53 Resolver Rules" class="dd-item 
         
         
         
         ">
-      <a href="/2-implement-hybrid-dns/2-route53-rule/">
-          <b>2.2. </b>Tạo Route 53 Resolver Rule
+      <a href="/5-setuphyriddns/5.2-createroute53/">
+           <b> 5.2 </b> Create Route 53 Resolver Rules
           
             <i class="fas fa-check read-icon"></i>
           
@@ -387,13 +369,13 @@
  
   
     
-    <li data-nav-id="/2-implement-hybrid-dns/3-inbound-endpoint/" title="Tạo Inbound Endpoint" class="dd-item 
+    <li data-nav-id="/5-setuphyriddns/5.3-createie/" title="Create Route 53 Inbound Endpoints" class="dd-item 
         
         
         
         ">
-      <a href="/2-implement-hybrid-dns/3-inbound-endpoint/">
-          <b>2.3. </b>Tạo Inbound Endpoint
+      <a href="/5-setuphyriddns/5.3-createie/">
+           <b> 5.3 </b> Create Route 53 Inbound Endpoints
           
             <i class="fas fa-check read-icon"></i>
           
@@ -415,13 +397,13 @@
  
   
     
-    <li data-nav-id="/2-implement-hybrid-dns/4-testing-result/" title="Kiểm tra kết quả" class="dd-item 
+    <li data-nav-id="/5-setuphyriddns/5.4-results/" title="Test results" class="dd-item 
         
         
         
         ">
-      <a href="/2-implement-hybrid-dns/4-testing-result/">
-          <b>2.4. </b>Kiểm tra kết quả
+      <a href="/5-setuphyriddns/5.4-results/">
+           <b> 5.4 </b> Test results
           
             <i class="fas fa-check read-icon"></i>
           
@@ -450,13 +432,13 @@
  
   
     
-    <li data-nav-id="/3-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/3-clean-up/">
-          <b>3. </b>Dọn dẹp tài nguyên
+      <a href="/6-cleanup/">
+           <b> 6. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -478,11 +460,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -555,6 +533,19 @@
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>17-06-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -583,22 +574,26 @@
 </span>
 
  
-<h1 id="thiết-lập-hybrid-dns-với-route-53-resolver">Thiết lập Hybrid DNS với Route 53 Resolver</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Đa số các khách hàng hiện tại đang sở hữu một cơ sở hệ thống DNS on-premise. Khi bạn khởi tạo các tài nguyên trên nền tảng AWS, AWS có cung cấp dịch vụ DNS thông qua <strong>Amazon Route 53</strong>. Trong bài lab lần này, chúng ta sẽ tiến hành trải nghiệm bằng việc xây dựng hệ thống DNS hybrid nhằm cho phép bạn tích hợp với hệ thống DNS on-premise hiện tại với dịch vụ DNS của <strong>Amazon Route 53</strong>.</p>
+<h1 id="set-up-hybrid-dns-with-route-53-resolver">Set up Hybrid DNS with Route 53 Resolver</h1>
+<h4 id="overview">Overview</h4>
+<p>The majority of existing customers own an on-premise <strong>DNS</strong> system. When you initialize resources on the AWS platform, AWS provides <strong>DNS</strong> service through <strong>Amazon Route 53</strong>. In this lab, we will experiment with building a <strong>DNS</strong> hybrid system that will allow you to integrate with your existing <strong>DNS</strong> on-premise system with **DNS service ** of <strong>Amazon Route 53</strong>.</p>
 <h4 id="route-53">Route 53</h4>
-<p><strong>Route 53</strong> cung cấp một số khả năng của DNS như: đăng ký miền DNS công cộng, khả năng tạo vùng DNS riêng, công cụ DNS hybrid và phân giải tên miền. Với tính năng phân giải tên miền, Route 53 Resolver có thể thực hiện tra cứu đệ quy đối với các hệ thống DNS công cộng.</p>
-<p>Trong Route 53, dịch vụ Route 53 Resolver cung cấp ba công cụ để kích hoạt kiến trúc DNS hybrid giữa cơ sở hệ thống DNS on-premise của bạn và AWS. Ba công cụ này là:</p>
+<p><strong>Route 53</strong> provides some <strong>DNS</strong> capabilities such as public <strong>DNS</strong> domain registration, the ability to create private <strong>DNS</strong> zones, <strong>DNS</strong> hybrid engine, and domain name resolution. With domain name resolution, Route 53 Resolver can perform recursive lookups against public <strong>DNS</strong> systems.</p>
+<p>In Route 53, the Route 53 Resolver service provides three tools to enable a hybrid <strong>DNS</strong> architecture between your <strong>DNS</strong> on-premise system and AWS. These three tools are:</p>
 <ul>
-<li><strong>Outbound Endpoints</strong>: Các truy vấn DNS từ Route 53 Resolver đến hệ thống DNS on-premise của bạn sẽ được gửi đi từ Outbound Endpoints.</li>
-<li><strong>Inbound Endpoints</strong>: Inbound endpoints đóng vai trò là mục tiêu cho các truy vấn DNS từ hệ thống DNS on-premise của bạn đến các tên miền được lưu trữ trên AWS.</li>
-<li><strong>Route 53 Resolver Rules</strong>: Với Route 53 Resolver Rules, bạn có thể cấu hình Route 53 để chuyển tiếp các truy vấn DNS cho các tên miền cụ thể của bạn tới hệ thống DNS on-premise.</li>
+<li><strong>Outbound Endpoint</strong>s: <strong>DNS</strong> queries from <strong>Route 53 Resolver</strong> to your <strong>DNS</strong> system will be sent from Outbound Endpoint<strong>s</strong> .</li>
+<li><strong>Inbound Endpoints</strong>: Inbound endpoints act as targets for <strong>DNS</strong> queries from your <strong>DNS</strong> on-premise system to domains hosted on AWS.</li>
+<li><strong>Route 53 Resolver Rules</strong>: With Route 53 Resolver Rules, you can configure Route 53 to forward <strong>DNS</strong> queries for your specific domains to the system DNS on-premise.</li>
 </ul>
-<h4 id="nội-dung">Nội dung:</h4>
+<p><img src="/images/icon.png?featherlight=false&amp;width=10pc" alt="Route 53"></p>
+<h4 id="content">Content</h4>
 <ol>
-<li><a href="1-prerequisite">Các bước chuẩn bị</a></li>
-<li><a href="2-implement-hybrid-dns">Thiết lập Hybrid DNS</a></li>
-<li><a href="3-clean-up">Dọn dẹp tài nguyên</a></li>
+<li><a href="1-introduce/">Introduction</a></li>
+<li><a href="2-prerequiste/">Preparation</a></li>
+<li><a href="3-connecttordgw/">Connect to RDGW</a></li>
+<li><a href="4-setupad/">Microsoft AD Deployment</a></li>
+<li><a href="5-setupyridDNS/">Setup DNS</a></li>
+<li><a href="6-cleanup/">Resource Cleanup</a></li>
 </ol>
 	
   
@@ -641,10 +636,11 @@
 
                     
                     
-                        
-                    
                     
 
+                    
+            
+        
                     
                         
             
@@ -740,9 +736,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -855,7 +848,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -865,19 +858,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1625903498"></script>
-    <script src="/js/perfect-scrollbar.min.js?1625903498"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1625903498"></script>
-    <script src="/js/jquery.sticky.js?1625903498"></script>
-    <script src="/js/featherlight.min.js?1625903498"></script>
-    <script src="/js/highlight.pack.js?1625903498"></script>
+    <script src="/js/clipboard.min.js?1655392259"></script>
+    <script src="/js/perfect-scrollbar.min.js?1655392259"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1655392259"></script>
+    <script src="/js/jquery.sticky.js?1655392259"></script>
+    <script src="/js/featherlight.min.js?1655392259"></script>
+    <script src="/js/highlight.pack.js?1655392259"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1625903498"></script>
-    <script src="/js/learn.js?1625903498"></script>
-    <script src="/js/hugo-learn.js?1625903498"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1655392259"></script>
+    <script src="/js/learn.js?1655392259"></script>
+    <script src="/js/hugo-learn.js?1655392259"></script>
 
-    <link href="/mermaid/mermaid.css?1625903498" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1625903498"></script>
+    <link href="/mermaid/mermaid.css?1655392259" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1655392259"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
