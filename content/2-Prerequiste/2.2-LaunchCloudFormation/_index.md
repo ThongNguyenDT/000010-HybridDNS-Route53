@@ -86,5 +86,3 @@ As a practice goal, we'll start with an RDGW host to reduce CloudFormation's ini
 ![Launch CloudFormation](/images/2.2-LaunchCloudFormation/00010.png?featherlight=false&width=90pc)
 
 11. View **Output** of the newly created Stack.
-
-![Launch CloudFormation](/images/2.2-LaunchCloudFormation/00011.png?featherlight=false&width=90pc)

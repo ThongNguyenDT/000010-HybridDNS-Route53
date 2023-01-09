@@ -87,6 +87,5 @@ Với mục tiêu làm thực hành, chúng ta sẽ bắt đầu với một RDG
 
 11. Xem **Output** của Stack vừa tạo.
 
-![Launch CloudFormation](/images/2.2-LaunchCloudFormation/00011.png?featherlight=false&width=90pc)
 
 
