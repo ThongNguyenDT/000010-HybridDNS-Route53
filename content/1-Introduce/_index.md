@@ -8,16 +8,20 @@ pre : " <b> 1. </b> "
 
 #### Overview
 
-The majority of existing customers own an on-premise **DNS** system. When you initialize resources on the AWS platform, AWS provides **DNS** service through **Amazon Route 53**. In this lab, we will experiment with building a **DNS** hybrid system that will allow you to integrate with your existing **DNS** on-premise system with **DNS service ** of **Amazon Route 53**.
+The majority of our current customers utilize an on-premise **DNS** system. As resources are initialized on the AWS platform, AWS offers **DNS** services through **Amazon Route 53**. This lab focuses on creating a hybrid **DNS** system, enabling integration between your existing on-premise **DNS** system and the **DNS** service provided by **Amazon Route 53**.
 
 #### Route 53
 
-**Route 53** provides some **DNS** capabilities such as: public **DNS** domain registration, ability to create private **DNS** zones, **DNS** hybrid engine and domain name resolution. With domain name resolution, Route 53 Resolver can perform recursive lookups against public **DNS** systems.
+**Route 53** offers various **DNS** capabilities, including:
+- Public **DNS** domain registration
+- Creation of private **DNS** zones
+- **DNS** hybrid engine
+- Domain name resolution
 
-In Route 53, the Route 53 Resolver service provides three tools to enable a hybrid **DNS** architecture between your **DNS** on-premise system and AWS. These three tools are:
+Within Route 53, the **Route 53 Resolver** service introduces three tools to facilitate a hybrid **DNS** architecture between your on-premise **DNS** system and AWS:
 
-- **Outbound Endpoints**: **DNS** queries from **Route 53 Resolver** to your **DNS** on-premise system will be sent from **Outbound Endpoints**.
-- **Inbound Endpoints**: Inbound endpoints act as targets for **DNS** queries from your **DNS** on-premise system to domains hosted on AWS.
-- **Route 53 Resolver** Rules: With Route 53 Resolver Rules, you can configure Route 53 to forward **DNS** queries for your specific domains to the **DNS** system on-premises.
+1. **Outbound Endpoints**: **Route 53 Resolver** sends **DNS** queries from AWS to your on-premise **DNS** system through these endpoints.
+2. **Inbound Endpoints**: These endpoints serve as targets for **DNS** queries from your on-premise **DNS** system to domains hosted on AWS.
+3. **Route 53 Resolver** Rules: Utilizing Resolver Rules, you can configure Route 53 to forward **DNS** queries for specific domains to your on-premise **DNS** system.
 
 ![Route 53](/images/icon.png?featherlight=false&width=10pc)

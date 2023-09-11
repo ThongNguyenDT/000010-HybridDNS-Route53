@@ -21,3 +21,4 @@ Trong Route 53, dịch vụ Route 53 Resolver cung cấp ba công cụ để kí
 - **Route 53 Resolver** Rules: Với Route 53 Resolver Rules, bạn có thể cấu hình Route 53 để chuyển tiếp các truy vấn **DNS** cho các tên miền cụ thể của bạn tới hệ thống **DNS** on-premise.
 
 ![Route 53](/images/icon.png?featherlight=false&width=10pc)
+
