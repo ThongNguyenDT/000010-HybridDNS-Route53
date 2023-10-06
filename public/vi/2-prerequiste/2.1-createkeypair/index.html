@@ -12,21 +12,21 @@
     <title>Tạo Key Pair :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -640,24 +640,24 @@
 <p>Để đảm bảo truy cập an toàn vào các <strong>EC2 instance</strong>, AWS sử dụng private/public key có dạng một cặp khóa. Với các <strong>Windows</strong> instance, key pair được sử dụng để lấy mật khẩu administrator qua <strong>Amazon EC2 console</strong>. Trong phần này, bạn sẽ tạo key pair.</p>
 <p><img src="/images/2-Pre/0003.png?featherlight=false&amp;width=45pc" alt="Create Key Pair"></p>
 <ol>
-<li>Truy cập vào <strong>AWS Management Console</strong></li>
-</ol>
+<li>
+<p>Truy cập vào <strong>AWS Management Console</strong></p>
 <ul>
 <li>Tìm EC2</li>
 <li>Chọn <strong>EC2</strong></li>
 </ul>
 <p><img src="/images/2.1-CreateKeypair/0001.png?featherlight=false&amp;width=90pc" alt="Create Key Pair"></p>
-<ol start="2">
-<li>Trong giao diện <strong>EC2</strong></li>
-</ol>
+</li>
+<li>
+<p>Trong giao diện <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Key Pairs</strong></li>
 <li>Chọn <strong>Create key pair</strong></li>
 </ul>
 <p><img src="/images/2.1-CreateKeypair/0002.png?featherlight=false&amp;width=90pc" alt="Create Key Pair"></p>
-<ol start="3">
-<li>Trong giao diện <strong>Create key pair</strong></li>
-</ol>
+</li>
+<li>
+<p>Trong giao diện <strong>Create key pair</strong></p>
 <ul>
 <li>Nhập <strong>hyrid-DNS</strong> cho <strong>Name</strong></li>
 <li><strong>Key pair type</strong>, chọn <strong>RSA</strong></li>
@@ -665,12 +665,14 @@
 <li>Chọn <strong>Create key pair</strong></li>
 </ul>
 <p><img src="/images/2.1-CreateKeypair/0003.png?featherlight=false&amp;width=90pc" alt="Create Key Pair"></p>
-<ol start="4">
-<li>Tạo key pair thành công.</li>
-</ol>
+</li>
+<li>
+<p>Tạo key pair thành công.</p>
 <p><img src="/images/2.1-CreateKeypair/0004.png?featherlight=false&amp;width=90pc" alt="Create Key Pair"></p>
-<ol start="5">
-<li>Quan trọng: AWS sẽ tự động tải file private của key pair với tên file <strong>hybrid-DNS.pem</strong>. Hãy đảm bảo bạn đã lưu file PEM và nhớ vị trí lưu vì bạn không thể tải lại file key này. Bạn sẽ phải dùng nó để giải mã password và kết nối tới <strong>EC2 instance</strong> được triển khai ở bước tiếp theo.</li>
+</li>
+<li>
+<p>Quan trọng: AWS sẽ tự động tải file private của key pair với tên file <strong>hybrid-DNS.pem</strong>. Hãy đảm bảo bạn đã lưu file PEM và nhớ vị trí lưu vì bạn không thể tải lại file key này. Bạn sẽ phải dùng nó để giải mã password và kết nối tới <strong>EC2 instance</strong> được triển khai ở bước tiếp theo.</p>
+</li>
 </ol>
 
 
@@ -949,19 +951,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

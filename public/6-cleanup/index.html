@@ -12,21 +12,21 @@
     <title>Clean up resources :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -603,6 +603,11 @@
     <li>
       <ul>
         <li></li>
+        <li><a href="#remove-inbound-endpoint">Remove inbound endpoint</a></li>
+        <li><a href="#remove-resolver-rule">Remove Resolver Rule</a></li>
+        <li><a href="#delete-outbound-endpoint">Delete <strong>Outbound Endpoint</strong></a></li>
+        <li><a href="#remove-aws-managed-microsoft-active-directory">Remove AWS Managed Microsoft Active Directory</a></li>
+        <li><a href="#delete-cloudformation-stack">Delete CloudFormation Stack</a></li>
       </ul>
     </li>
   </ul>
@@ -631,50 +636,112 @@
 
 
 	<h4 id="clean-up-resources">Clean up resources</h4>
-<h4 id="remove-inbound-endpoint">Remove inbound endpoint</h4>
+<h3 id="remove-inbound-endpoint">Remove inbound endpoint</h3>
 <ul>
 <li>Access to Route 53 Management Console</li>
-<li>In the left sidebar, select Inbound endpoints</li>
-<li>Tick the Inbound endpoint related to the lab</li>
+<li>In the left sidebar, select <strong>Inbound endpoints</strong></li>
+<li>Tick the <strong>Inbound endpoint</strong> related to the lab</li>
 <li>Select <strong>Delete</strong></li>
-<li>Type <strong>Delete</strong> in the empty box and press Submit</li>
+<li>Type <strong>Delete</strong> in the empty box and press <strong>Submit</strong></li>
 </ul>
-<h4 id="remove-resolver-rule">Remove Resolver Rule</h4>
+<p>Explanation:</p>
+<ol>
+<li>Open the Route 53 Management Console in your AWS account.</li>
+<li>On the left sidebar, find and click on &ldquo;Inbound endpoints.&rdquo;</li>
+<li>Locate the specific <strong>Inbound endpoint</strong> associated with the lab.</li>
+<li>Click on the <strong>Delete</strong> option.</li>
+<li>A confirmation box will appear; enter <strong>Delete</strong> in the provided empty box and click <strong>Submit</strong>.</li>
+</ol>
+<h3 id="remove-resolver-rule">Remove Resolver Rule</h3>
 <ul>
 <li>Access to Route 53 Management Console</li>
-<li>In the left sidebar, select Rules</li>
-<li>Click on the Rule related to the lab to enter the Rule information page</li>
-<li>In the VPCs section, tick the VPC that is connected to the Rule and select Disassociate</li>
-<li>Type disassociate in the box and select Submit</li>
-<li>Wait 1-2 minutes to disconnect from that VPC.</li>
-<li>In the information page of the Rule, select <strong>Delete</strong></li>
-<li>Type <strong>Delete</strong> in the empty box and press Submit</li>
+<li>In the left sidebar, select <strong>Rules</strong></li>
+<li>Click on the <strong>Rule</strong> related to the lab to view its information</li>
+<li>In the VPCs section, select the connected VPC and choose <strong>Disassociate</strong></li>
+<li>Type <strong>disassociate</strong> in the box and select <strong>Submit</strong></li>
+<li>Wait 1-2 minutes for the disassociation process to complete.</li>
+<li>In the Rule information page, select <strong>Delete</strong></li>
+<li>Type <strong>Delete</strong> in the empty box and press <strong>Submit</strong></li>
 </ul>
-<h4 id="delete-outbound-endpoint">Delete <strong>Outbound Endpoint</strong></h4>
+<p>Explanation:</p>
+<ol>
+<li>Access the Route 53 Management Console.</li>
+<li>From the left sidebar, click on &ldquo;Rules.&rdquo;</li>
+<li>Locate and click on the specific <strong>Rule</strong> related to the lab to view its details.</li>
+<li>Under the VPCs section, select the connected VPC and choose to <strong>Disassociate</strong>.</li>
+<li>Type <strong>disassociate</strong> in the provided box and confirm with <strong>Submit</strong>.</li>
+<li>Wait for 1-2 minutes to ensure disconnection from the VPC.</li>
+<li>Return to the Rule information page, select <strong>Delete</strong>.</li>
+<li>Confirm the deletion by typing <strong>Delete</strong> in the empty box and pressing <strong>Submit</strong>.</li>
+</ol>
+<h3 id="delete-outbound-endpoint">Delete <strong>Outbound Endpoint</strong></h3>
 <ul>
 <li>Access to Route 53 Management Console</li>
-<li>In the left sidebar, select Outbound Endpoint<strong>s</strong></li>
-<li>Tick <strong>Outbound Endpoint</strong> related to the lab</li>
+<li>In the left sidebar, select <strong>Outbound Endpoints</strong></li>
+<li>Tick the <strong>Outbound Endpoint</strong> related to the lab</li>
 <li>Select <strong>Delete</strong></li>
-<li>Type <strong>Delete</strong> in the empty box and press Submit</li>
+<li>Type <strong>Delete</strong> in the empty box and press <strong>Submit</strong></li>
 </ul>
-<h4 id="remove-aws-managed-microsoft-active-directory">Remove AWS Managed Microsoft Active Directory</h4>
+<p>Explanation:</p>
+<ol>
+<li>Open the Route 53 Management Console.</li>
+<li>From the left sidebar, choose &ldquo;Outbound Endpoints.&rdquo;</li>
+<li>Locate and select the relevant <strong>Outbound Endpoint</strong> for the lab.</li>
+<li>Click on <strong>Delete</strong>.</li>
+<li>Confirm the deletion by entering <strong>Delete</strong> in the provided box and clicking <strong>Submit</strong>.</li>
+</ol>
+<h3 id="remove-aws-managed-microsoft-active-directory">Remove AWS Managed Microsoft Active Directory</h3>
 <ul>
 <li>Access to Directory Service Management Console</li>
-<li>In the left sidebar, select Directories</li>
-<li>Tick on the Directory related to the lab</li>
-<li>Select Actions and select <strong>Delete</strong> directory</li>
-<li>Type the domain name <strong>DNS</strong> of the directory in the empty box and press <strong>Delete</strong></li>
+<li>In the left sidebar, select <strong>Directories</strong></li>
+<li>Tick the Directory related to the lab</li>
+<li>Select <strong>Actions</strong> and choose <strong>Delete directory</strong></li>
+<li>Type the domain name (DNS) of the directory in the empty box and press <strong>Delete</strong></li>
 </ul>
-<h4 id="delete-cloudformation-stack---when-you-delete-cloudformation-stack-the-resources-created-by-that-stack-are-deleted">Delete CloudFormation Stack - when you delete CloudFormation Stack, the resources created by that stack are deleted.</h4>
+<p>Explanation:</p>
+<ol>
+<li>Access the Directory Service Management Console.</li>
+<li>From the left sidebar, click on &ldquo;Directories.&rdquo;</li>
+<li>Locate and select the relevant <strong>Directory</strong> associated with the lab.</li>
+<li>Choose <strong>Actions</strong> and then select <strong>Delete directory</strong>.</li>
+<li>Enter the domain name (DNS) of the directory in the provided box.</li>
+<li>Confirm the deletion by clicking on <strong>Delete</strong>.</li>
+</ol>
+<h3 id="delete-cloudformation-stack">Delete CloudFormation Stack</h3>
 <ul>
-<li>In this case, the Hybrid<strong>DNS</strong> stack has created two nested stacks, and when you delete the Hybrid<strong>DNS</strong> stack, the two-child stacks are also deleted.</li>
-<li>Access to CloudFormation Management Console</li>
-<li>In the left sidebar, select Stacks</li>
-<li>Tick the Hybrid<strong>DNS</strong> stack and select <strong>Delete</strong></li>
-<li>In the prompt, select <strong>Delete</strong> stack</li>
-<li>Wait a few minutes until CloudFormation clears all resources</li>
+<li>
+<p>Note: Deleting the CloudFormation Stack removes the resources created by it.</p>
+</li>
+<li>
+<p>In this case, the Hybrid<strong>DNS</strong> stack has created two nested stacks, and deleting the Hybrid<strong>DNS</strong> stack will also remove the child stacks.</p>
+</li>
+<li>
+<p>Access to CloudFormation Management Console</p>
+</li>
+<li>
+<p>In the left sidebar, select <strong>Stacks</strong></p>
+</li>
+<li>
+<p>Tick the Hybrid<strong>DNS</strong> stack and select <strong>Delete</strong></p>
+</li>
+<li>
+<p>In the prompt, choose <strong>Delete stack</strong></p>
+</li>
+<li>
+<p>Wait for a few minutes while CloudFormation clears all resources</p>
+</li>
 </ul>
+<p>Explanation:</p>
+<ol>
+<li>Note that deleting a CloudFormation Stack will result in the removal of the associated resources.</li>
+<li>Specifically, in this scenario, the Hybrid<strong>DNS</strong> stack has generated two nested stacks, which will also be deleted upon removing the Hybrid<strong>DNS</strong> stack.</li>
+<li>Access the CloudFormation Management Console.</li>
+<li>From the left sidebar, click on &ldquo;Stacks.&rdquo;</li>
+<li>Locate and select the Hybrid<strong>DNS</strong> stack.</li>
+<li>Choose <strong>Delete</strong> for stack removal.</li>
+<li>Confirm the action by selecting <strong>Delete stack</strong> in the prompt.</li>
+<li>Allow a few minutes for CloudFormation to complete the resource clearance.</li>
+</ol>
 
 
 
@@ -948,19 +1015,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

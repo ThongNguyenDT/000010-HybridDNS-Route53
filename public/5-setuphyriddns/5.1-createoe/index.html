@@ -12,21 +12,21 @@
     <title>Create Route 53 Outbound Endpoint :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -636,56 +636,57 @@
 
 
 
-	<h4 id="create-route-53-outbound-endpoint">Create Route 53 <strong>Outbound Endpoint</strong></h4>
-<p>As a first step, we will create Route 53 <strong>Outbound Endpoint</strong> to allow <strong>Route 53 Resolver</strong> to forward <strong>DNS</strong> queries with domains hosted outside of Route 53. When you Route 53 <strong>Outbound Endpoint</strong>, AWS will create an <strong>elastic network interface</strong> (ENI) in each <strong>Availability Zones</strong> (AZ) you specify.</p>
+	<h4 id="create-route-53-outbound-endpoint">Create Route 53 Outbound Endpoint</h4>
+<p>To begin, we will create a Route 53 <strong>Outbound Endpoint</strong> to enable the Route 53 Resolver to forward DNS queries for domains hosted outside of Route 53. When you create a Route 53 <strong>Outbound Endpoint</strong>, AWS will generate an <strong>elastic network interface</strong> (ENI) in each specified <strong>Availability Zone</strong> (AZ).</p>
 <p><img src="/images/2-Pre/0006.png?featherlight=false&amp;width=45pc" alt="RDGW"></p>
 <ol>
-<li>Access Route 53 console through the search box and find Route 53.</li>
-</ol>
+<li>Access the Route 53 console by using the search box and navigating to Route 53.
 <ul>
-<li>Expand the left sidebar, select Outbound Endpoint<strong>s</strong>, and select Create <strong>Outbound Endpoint</strong></li>
+<li>Expand the left sidebar, choose <strong>Outbound Endpoints</strong>, and then select <strong>Create Outbound Endpoint</strong>.</li>
 </ul>
+</li>
+</ol>
 <p><img src="/images/5.1-CreateOE/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 <ol start="2">
-<li>On the Create <strong>Outbound Endpoint</strong> page, enter the following information:
+<li>On the <strong>Create Outbound Endpoint</strong> page, provide the following details:
 <ul>
-<li>Endpoint name: R53-OutboundEndpoint</li>
-<li><strong>VPC in the Region</strong>: HybridDNS-VPCStack-. (This is the VPC created by CloudFormation in the previous section)</li>
-<li><strong>Security group for this endpoint</strong>: d-###….#_controllers. (This is the security group that CloudFormation created to protect connections to <strong>AWS Managed Microsoft Active Directory</strong>)</li>
+<li><strong>Endpoint name</strong>: R53-OutboundEndpoint</li>
+<li><strong>VPC in the Region</strong>: HybridDNS-VPCStack-. (This refers to the VPC created by CloudFormation in the preceding section)</li>
+<li><strong>Security group for this endpoint</strong>: d-###….#_controllers. (This is the security group generated by CloudFormation to secure connections to <strong>AWS Managed Microsoft Active Directory</strong>)</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/5.1-CreateOE/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 <ol start="3">
-<li>Configure <strong>IP addresses</strong></li>
+<li>Configure <strong>IP addresses</strong>:</li>
 </ol>
 <ul>
-<li>At <strong>IP address #1:</strong>
+<li>For <strong>IP address #1</strong>:
 <ul>
-<li>In <strong>Availability Zone</strong>, select “ap-southeast-1a”</li>
-<li>In <strong>Subnet</strong>, select “Private subnet 1A”</li>
-<li>In <strong>IP address</strong>, select “Use an IP address that is selected automatically”</li>
+<li>Choose <strong>Availability Zone</strong>: &ldquo;ap-southeast-1a&rdquo;</li>
+<li>Select <strong>Subnet</strong>: &ldquo;Private subnet 1A&rdquo;</li>
+<li>Choose <strong>IP address</strong>: &ldquo;Use an IP address that is selected automatically&rdquo;</li>
 </ul>
 </li>
-<li>At <strong>IP address #2:</strong>
+<li>For <strong>IP address #2</strong>:
 <ul>
-<li>In <strong>Availability Zone</strong>, select “ap-southeast-1c”</li>
-<li>In <strong>Subnet</strong>, select “Private subnet 2A”</li>
-<li>In <strong>IP address</strong>, select “Use an IP address that is selected automatically”</li>
+<li>Choose <strong>Availability Zone</strong>: &ldquo;ap-southeast-1c&rdquo;</li>
+<li>Select <strong>Subnet</strong>: &ldquo;Private subnet 2A&rdquo;</li>
+<li>Choose <strong>IP address</strong>: &ldquo;Use an IP address that is selected automatically&rdquo;</li>
 </ul>
 </li>
 </ul>
 <p><img src="/images/5.1-CreateOE/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>Finally, select <strong>Create Outbound Endpoint</strong>.</li>
+<ol start="4">
+<li>Finally, click on <strong>Create Outbound Endpoint</strong>.</li>
 </ol>
 <p><img src="/images/5.1-CreateOE/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
-<li>After 5 minutes, <strong>Outbound Endpoint</strong> will be configured in your VPC.</li>
+<ol start="5">
+<li>After approximately 5 minutes, the <strong>Outbound Endpoint</strong> will be configured within your VPC.</li>
 </ol>
 <p><img src="/images/5.1-CreateOE/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
-<li>Once the <strong>Outbound Endpoints</strong> are created, click on the <strong>Outbound Endpoint</strong> to view the details of the endpoint. You will see the IP addresses assigned to the <strong>Outbound Endpoints</strong>. AWS injects an <strong>elastic network interface</strong> (ENI) into your subnet and assigns this IP address to the ENI.</li>
+<ol start="6">
+<li>Once the <strong>Outbound Endpoints</strong> are successfully created, click on an <strong>Outbound Endpoint</strong> to access its details. You will find the IP addresses assigned to the <strong>Outbound Endpoints</strong>. AWS deploys an <strong>elastic network interface</strong> (ENI) into your subnet and assigns the specified IP address to this ENI.</li>
 </ol>
 <p><img src="/images/5.1-CreateOE/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
@@ -965,19 +966,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

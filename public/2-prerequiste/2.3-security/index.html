@@ -12,21 +12,21 @@
     <title>Configuring Security Group :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -639,46 +639,43 @@
 	<h4 id="configure-security-group">Configure Security Group</h4>
 <ol>
 <li>
-<p>Log in to <strong>AWS Console</strong> and access <strong>EC2 Management console</strong> through the search box and search for “EC2”.</p>
+<p>Log in to <strong>AWS Console</strong> and access the <strong>EC2 Management Console</strong>:</p>
 <ul>
-<li>Make sure you have selected the correct Region. Notice in the left corner of <strong>AWS Console</strong> and select the correct Region you need (Here we are selecting ap-southeast-1)</li>
+<li>Open the AWS Console and search for &ldquo;EC2&rdquo; using the search box.</li>
+<li>Ensure that you have chosen the correct Region. Look in the upper left corner of the AWS Console and select the desired Region (In this case, we are selecting ap-southeast-1).</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.3-SecurityGroup/0001.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
-<ol start="2">
-<li>
-<p>In the <strong>EC2</strong> interface</p>
-<ul>
-<li>In the left menu, select <strong>Security Groups</strong>.</li>
-<li>Select the checkbox of the security group whose description is “<strong>Enable RDP access from the Internet</strong>”</li>
-<li>In the area at the bottom of the screen, select the Inbound tab.</li>
-<li>Select <strong>Edit inbound rules</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>Within the <strong>EC2</strong> interface:</p>
+<ul>
+<li>From the left-hand menu, click on <strong>Security Groups</strong>.</li>
+<li>Check the checkbox next to the security group with the description &ldquo;<strong>Enable RDP access from the Internet</strong>&rdquo;.</li>
+<li>At the bottom of the screen, go to the Inbound tab.</li>
+<li>Click on <strong>Edit inbound rules</strong>.</li>
+</ul>
 <p><img src="/images/2.3-SecurityGroup/0002.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
-<ol start="3">
+</li>
 <li>
-<p>Conduct configuration editing <strong>Inbound</strong></p>
+<p>Edit the <strong>Inbound</strong> configuration:</p>
 <ul>
-<li>Select <strong>Delete</strong> next to the rule that says <strong>Port Range</strong>, 3391 to delete the rule</li>
-<li>Select <strong>Delete</strong> next to the rule that says <strong>Port Range</strong>, 443 to delete the rule</li>
-<li>In the RDP rule in the Source column, select in the list &ldquo;<strong>My IP</strong>&rdquo; (within the lab you can choose <strong>0.0.0.0/0</strong>)</li>
-<li>In the ICMP rule in the Source column, select from the list &ldquo;<strong>My IP</strong>&rdquo; (in the scope of the lab, you can choose <strong>0.0.0.0/0</strong>)</li>
-<li>Select Save rules</li>
+<li>Click <strong>Delete</strong> next to the rule that specifies <strong>Port Range</strong> 3391 to remove the rule.</li>
+<li>Click <strong>Delete</strong> next to the rule that specifies <strong>Port Range</strong> 443 to remove the rule.</li>
+<li>For the RDP rule in the Source column, choose &ldquo;<strong>My IP</strong>&rdquo; from the list (for the lab, you can use <strong>0.0.0.0/0</strong>).</li>
+<li>For the ICMP rule in the Source column, choose &ldquo;<strong>My IP</strong>&rdquo; from the list (for the lab, you can use <strong>0.0.0.0/0</strong>).</li>
+<li>Click <strong>Save rules</strong>.</li>
 </ul>
+<p><img src="/images/2.3-SecurityGroup/0003.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Finish configuring the security group.</p>
+<p><img src="/images/2.3-SecurityGroup/0004.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
 </li>
 </ol>
-<p><img src="/images/2.3-SecurityGroup/0003.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
-<ol start="4">
-<li>Complete the security group configuration.</li>
-</ol>
-<p><img src="/images/2.3-SecurityGroup/0004.png?featherlight=false&amp;width=90pc" alt="Security Group"></p>
-
-<div class="notices note" ><p>When securing your application, you need to make sure to open only the ports that your application needs. In this step, you removed ports 3391 and 443, as you will not be using them in this exercise. Also, you&rsquo;ve blocked access so that RDP and ICMP connections can only originate from your public IP address.</p>
-</div>
-
+<blockquote>
+<p><strong>Note:</strong>
+When securing your application, it&rsquo;s important to open only the ports that your application requires. In this step, you have removed ports 3391 and 443 since they are not needed for this exercise. Additionally, you&rsquo;ve restricted access so that RDP and ICMP connections are allowed only from your public IP address.</p>
+</blockquote>
 
 
 
@@ -959,19 +956,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

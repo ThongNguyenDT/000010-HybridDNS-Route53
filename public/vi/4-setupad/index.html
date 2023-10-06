@@ -12,21 +12,21 @@
     <title>Triển khai Microsoft AD :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -631,31 +631,29 @@
 
 
 	<h4 id="triển-khai-microsoft-ad">Triển khai Microsoft AD</h4>
-<p>Để giả lập <strong>DNS</strong> on-premise, chúng ta sẽ sử dụng dịch vụ <strong>AWS Directory Service</strong> để triển khai **AWS Managed Microsoft **Active Directory trong hai private subnet được tạo bởi CloudFormation như hình dưới đây:</p>
-<p><img src="/images/2-Pre/0004.png?featherlight=false&amp;width=45pc" alt="RDGW"></p>
+<p>Để giả lập <strong>DNS</strong> on-premise, chúng ta sẽ sử dụng dịch vụ <strong>AWS Directory Service</strong> để triển khai <strong>AWS Managed Microsoft Active Directory</strong> trong hai private subnet được tạo bởi CloudFormation như hình dưới đây:</p>
+<p><img src="/images/2-Pre/0004.png?featherlight=false&amp;width=45pc" alt="Hình ảnh"></p>
 <ol>
-<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào Directory Service console thông qua khung tìm kiếm và tìm Directory Services.</li>
-</ol>
-<ul>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của <strong>AWS Console</strong> và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn ap-southeast-1)</li>
-</ul>
-<p><img src="/images/4-AD/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="2">
 <li>
-<p>Nếu là lần đầu truy cập vào Directory Services ở region, bạn sẽ được dẫn đến màn hình chào khởi đầu. Mở rộng thanh bên trái và chọn Directories.</p>
+<p>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào Directory Service console thông qua khung tìm kiếm và tìm Directory Services.</p>
+<ul>
+<li>Hãy chắc chắn bạn đã chọn đúng <strong>Region</strong> (vùng). Chú ý ở góc trái của <strong>AWS Console</strong> và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn ap-southeast-1)</li>
+</ul>
+<p><img src="/images/4-AD/0001.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Nếu là lần đầu truy cập vào <strong>Directory Services</strong> ở vùng này, bạn sẽ được dẫn đến màn hình chào khởi đầu. Mở rộng thanh bên trái và chọn <strong>Directories</strong>.</p>
 <ul>
 <li>Chọn <strong>Set up directory</strong>.</li>
 </ul>
+<p><img src="/images/4-AD/0002.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
 </li>
-</ol>
-<p><img src="/images/4-AD/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>Thực hiện chọn <strong>Directory types</strong>, chọn <strong>AWS Managed Microsoft AD</strong></li>
-</ol>
-<p><img src="/images/4-AD/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
 <li>
-<p>Trong trang Enter Directory Information, nhập vào các thông tin sau:</p>
+<p>Thực hiện chọn <strong>Directory types</strong>, chọn <strong>AWS Managed Microsoft AD</strong>.</p>
+<p><img src="/images/4-AD/0003.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Trong trang <strong>Enter Directory Information</strong>, nhập vào các thông tin sau:</p>
 <ul>
 <li>
 <p>Ở <strong>Edition</strong>: chọn <strong>Standard Edition</strong>.</p>
@@ -667,12 +665,10 @@
 <p>Ở <strong>Directory NetBIOS name</strong>: onprem (tên <strong>NetBIOS</strong> này phải là duy nhất trong số các directory của bạn).</p>
 </li>
 </ul>
+<p><img src="/images/4-AD/0004.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
 </li>
-</ol>
-<p><img src="/images/4-AD/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
 <li>
-<p>Tiếp tục cấu hình</p>
+<p>Tiếp tục cấu hình:</p>
 <ul>
 <li>
 <p>Ở <strong>Directory Description</strong>: This is to simulate the on-prem AD.</p>
@@ -687,25 +683,25 @@
 <p>Chọn <strong>Next</strong>.</p>
 </li>
 </ul>
+<p><img src="/images/4-AD/0005.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Ở <strong>Choose VPC and subnets</strong>, chọn <strong>VPC Hybrid-DNS-VPCStack</strong> mà chúng ta đã tạo từ trước và hai private subnet <strong>Private subnet 1A</strong> và <strong>Private subnet 2A</strong>. Sau đó, chọn <strong>Next</strong>.</p>
+<p><img src="/images/4-AD/0006.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Ở màn hình <strong>Review &amp; create</strong>, xem lại thiết lập và chọn <strong>Create Directory</strong>.</p>
+<p><img src="/images/4-AD/0007.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Directory sẽ mất khoảng 20 phút để tạo. Trong thời gian này, AWS sẽ cung cấp hai máy chủ <strong>Windows</strong> và nâng chúng trở thành <strong>Active Directory</strong> domain controllers cho AD forest mà bạn đã chỉ định. AD forest này sẽ là một AD forest mới. Quá trình sẽ hoàn tất khi bạn thấy trạng thái chuyển sang Active.</p>
+<p><img src="/images/4-AD/0008.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+</li>
+<li>
+<p>Khi directory đã được tạo, bạn có thể xem chi tiết bằng cách nhấp vào <strong>Directory ID</strong>. Hai địa chỉ IP của <strong>DNS</strong> được liệt kê là địa chỉ IP của <strong>elastic network interfaces</strong> (ENI) đã được đặt trong availability zone của bạn để giao tiếp với <strong>AWS Managed Microsoft AD Domain Controllers</strong>.</p>
+<p><img src="/images/4-AD/0009.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
 </li>
 </ol>
-<p><img src="/images/4-AD/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="6">
-<li>Ở Choose VPC and subnets, chọn VPC Hybrid<strong>DNS</strong>-VPCStack mà chúng ta đã tạo từ trước và hai private subnet Private subnet 1A và Private subnet 2A. Sau đó, chọn Next.</li>
-</ol>
-<p><img src="/images/4-AD/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="7">
-<li>Ở màn hình Review &amp; create, xem lại thiết lập và chọn Create Directory.</li>
-</ol>
-<p><img src="/images/4-AD/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="8">
-<li>Directory sẽ mất khoảng 20 phút để tạo. Trong thời gian này, AWS sẽ cung cấp hai máy chủ <strong>Windows</strong> và nâng chúng trở thành <strong>Active Directory</strong> domain controllers cho AD forest mà bạn đã chỉ định. AD forest này sẽ là một AD forest mới. Quá trình sẽ hoàn tất khi bạn thấy trạng thái chuyển sang Active</li>
-</ol>
-<p><img src="/images/4-AD/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="9">
-<li>Khi directory đã được tạo, bạn có thể xem chi tiết bằng cách nhấp vào Directory ID. Hai địa chỉ IP của <strong>DNS</strong> được liệt kê là địa chỉ IP của <strong>elastic network interfaces</strong> (ENI) đã được đặt availability zone của bạn để giao tiếp với <strong>AWS Managed Microsoft AD Domain Controllers</strong>.</li>
-</ol>
-<p><img src="/images/4-AD/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
 
 
@@ -982,19 +978,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

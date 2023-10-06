@@ -12,21 +12,21 @@
     <title>Tạo Route 53 Inbound Endpoints :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -637,7 +637,7 @@
 
 
 	<h4 id="tạo-route-53-inbound-endpoints">Tạo Route 53 Inbound Endpoints</h4>
-<p>Để cho phép hệ thống <strong>DNS</strong> on-premise của bạn có thể truy vấn <strong>Route 53 Resolver</strong> cho bất kỳ <strong>DNS</strong> zones nào (e.g. Private Zones) được host trên Route 53, bạn cần tạo Route 53 Inbound Endpoint. Inbound Endpoint là cầu nối cho các dịch vụ khác truy vấn Route 53 để phân giải tên miền. Khi bạn tạo Inbound Endpoint, AWS sẽ tạo một elastic network interface (ENI) trong mỗi availability zone (AZ) mà bạn chỉ định sẽ nhận các truy vấn <strong>DNS</strong> đi vào.</p>
+<p>Để cho phép hệ thống <strong>DNS</strong> on-premise của bạn có thể truy vấn <strong>Route 53 Resolver</strong> cho bất kỳ <strong>DNS</strong> zones nào (<em>ví dụ: Private Zones</em>) được host trên Route 53, bạn cần tạo Route 53 Inbound Endpoint. Inbound Endpoint là cầu nối cho các dịch vụ khác truy vấn Route 53 để phân giải tên miền. Khi bạn tạo Inbound Endpoint, AWS sẽ tạo một elastic network interface (ENI) trong mỗi availability zone (AZ) mà bạn chỉ định sẽ nhận các truy vấn <strong>DNS</strong> đi vào.</p>
 <p><img src="/images/2-Pre/0007.png?featherlight=false&amp;width=45pc" alt="Route 53 Inbound Endpoints"></p>
 <ol>
 <li>Truy cập Route 53 console thông qua khung tìm kiếm và tìm Route 53.
@@ -652,7 +652,7 @@
 <ul>
 <li>Ở <strong>Endpoint name</strong>: R53-InboundEndpoint</li>
 <li><strong>VPC in the Region</strong>: HybridDNS-VPCStack-. (Đây là VPC được tạo bởi CloudFormation ở phần trước)</li>
-<li><strong>Security group for this endpoint</strong>: d-###….#_controllers. (Đây là security group mà CloudFormation đã tạo để bảo vệ kết nối tới AWS Managed Microsoft Active Director)</li>
+<li><strong>Security group for this endpoint</strong>: d-###….#_controllers. (Đây là security group mà CloudFormation đã tạo để bảo vệ kết nối tới AWS Managed Microsoft Active Directory)</li>
 </ul>
 </li>
 </ol>
@@ -663,16 +663,16 @@
 <ul>
 <li>Ở <strong>IP address #1:</strong>
 <ul>
-<li>Ở <strong>Availability Zone</strong>, chọn “ap-northeast-1a”</li>
-<li>Ở <strong>Subnet</strong>, chọn “Private subnet 1A”</li>
-<li>Ở <strong>IP address</strong>, chọn “Use an IP address that is selected automatically”</li>
+<li>Ở <strong>Availability Zone</strong>, chọn &ldquo;ap-northeast-1a&rdquo;</li>
+<li>Ở <strong>Subnet</strong>, chọn &ldquo;Private subnet 1A&rdquo;</li>
+<li>Ở <strong>IP address</strong>, chọn &ldquo;Use an IP address that is selected automatically&rdquo;</li>
 </ul>
 </li>
 <li>Ở <strong>IP address #2:</strong>
 <ul>
-<li>Ở <strong>Availability Zone</strong>, chọn “ap-northeast-1c”</li>
-<li>Ở <strong>Subnet</strong>, chọn “Private subnet 2A”</li>
-<li>Ở <strong>IP address</strong>, chọn “Use an IP address that is selected automatically”</li>
+<li>Ở <strong>Availability Zone</strong>, chọn &ldquo;ap-northeast-1c&rdquo;</li>
+<li>Ở <strong>Subnet</strong>, chọn &ldquo;Private subnet 2A&rdquo;</li>
+<li>Ở <strong>IP address</strong>, chọn &ldquo;Use an IP address that is selected automatically&rdquo;</li>
 </ul>
 </li>
 </ul>
@@ -969,19 +969,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

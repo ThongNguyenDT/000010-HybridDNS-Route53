@@ -12,21 +12,21 @@
     <title>Microsoft AD Deployment :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -631,81 +631,75 @@
 
 
 	<h4 id="deploy-microsoft-ad">Deploy Microsoft AD</h4>
-<p>To emulate <strong>DNS</strong> on-premise, we will use <strong>AWS Directory Service</strong> to deploy <strong>AWS Managed Microsoft Active Directory</strong> in two private subnets created by CloudFormation as shown below :</p>
+<p>To set up <strong>DNS emulation</strong> on-premises, we will utilize the <strong>AWS Directory Service</strong> to deploy <strong>AWS Managed Microsoft Active Directory</strong> in two private subnets created by CloudFormation, as illustrated below:</p>
 <p><img src="/images/2-Pre/0004.png?featherlight=false&amp;width=45pc" alt="RDGW"></p>
 <ol>
-<li>Log in to <strong>AWS Console</strong> and access the Directory Service console through the search box and find Directory Services.</li>
-</ol>
-<ul>
-<li>Make sure you have selected the correct Region. Notice in the left corner of <strong>AWS Console</strong> and select the correct Region you need (Here we are selecting ap-southeast-1)</li>
-</ul>
+<li>
+<p>Log in to the <strong>AWS Console</strong> and navigate to the Directory Service console by using the search box and selecting Directory Services.</p>
+<p>Ensure that you have chosen the appropriate Region. Check the top left corner of the <strong>AWS Console</strong> and select the desired Region (For instance, we&rsquo;re selecting ap-southeast-1).</p>
 <p><img src="/images/4-AD/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="2">
-<li>
-<p>If you are accessing Directory Services for the first time in your region, you will be taken to the initial welcome screen. Expand the left sidebar and select Directories.</p>
-<ul>
-<li>Select <strong>Set up directory</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>If this is your first time accessing Directory Services in your region, you will be directed to the initial welcome screen. Expand the left sidebar and click on Directories.</p>
+<ul>
+<li>Choose <strong>Set up directory</strong>.</li>
+</ul>
 <p><img src="/images/4-AD/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>Select <strong>Directory types</strong>, select <strong>AWS Managed Microsoft AD</strong></li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Directory types</strong> and then choose <strong>AWS Managed Microsoft AD</strong>.</p>
 <p><img src="/images/4-AD/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
+</li>
 <li>
-<p>In the Enter Directory Information page, enter the following information:</p>
+<p>On the &ldquo;Enter Directory Information&rdquo; page, provide the following details:</p>
 <ul>
 <li>
-<p>In <strong>Edition</strong>: select <strong>Standard Edition</strong>.</p>
+<p>For <strong>Edition</strong>, select <strong>Standard Edition</strong>.</p>
 </li>
 <li>
-<p>In <strong>Directory DNS name</strong>: onprem.example.com (this <strong>DNS</strong> name must be unique among your directories).</p>
+<p>For <strong>Directory DNS name</strong>, use onprem.example.com (ensure this <strong>DNS</strong> name is unique among your directories).</p>
 </li>
 <li>
-<p>In <strong>Directory NetBIOS name</strong>: onprem (this <strong>NetBIOS</strong> name must be unique among your directories).</p>
+<p>For <strong>Directory NetBIOS name</strong>, use onprem (ensure this <strong>NetBIOS</strong> name is unique among your directories).</p>
 </li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/4-AD/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
+</li>
 <li>
-<p>Continue configuration</p>
+<p>Proceed with the configuration:</p>
 <ul>
 <li>
-<p>In <strong>Directory Description</strong>: This is to simulate the on-prem AD.</p>
+<p>For <strong>Directory Description</strong>, use this to simulate the on-prem AD.</p>
 </li>
 <li>
-<p>In <strong>Admin Password</strong>: Use a password you can remember. Please note the password complexity requirements listed on the screen.</p>
+<p>Set an <strong>Admin Password</strong> that you can remember. Note the password complexity requirements provided on the screen.</p>
 </li>
 <li>
-<p>In <strong>Confirm password</strong>: Re-enter the password again.</p>
+<p>Confirm the password by entering it again.</p>
 </li>
 <li>
-<p>Select <strong>Next</strong>.</p>
+<p>Click on <strong>Next</strong>.</p>
 </li>
 </ul>
+<p><img src="/images/4-AD/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>In the &ldquo;Choose VPC and subnets&rdquo; section, select the VPC named Hybrid<strong>DNS</strong>-VPCStack that we previously created, along with two private subnets: Private subnet 1A and Private subnet 2A. Then, proceed to the next step.</p>
+<p><img src="/images/4-AD/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>On the &ldquo;Review &amp; create&rdquo; screen, carefully review the settings, and then click on <strong>Create Directory</strong>.</p>
+<p><img src="/images/4-AD/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>The creation of the directory will take approximately 20 minutes. During this time, AWS will provision two <strong>Windows</strong> servers and promote them to <strong>Active Directory</strong> domain controllers for the specified AD forest. This forest will be a new AD forest. The process will be marked as complete when the status changes to Active.</p>
+<p><img src="/images/4-AD/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Once the directory has been successfully created, you can view its details by clicking on the Directory ID. The two <strong>DNS</strong> IP addresses listed represent the IP addresses of <strong>elastic network interfaces</strong> (ENI) associated with your availability zone for communication with <strong>AWS Managed Microsoft AD Domain Controllers</strong>.</p>
+<p><img src="/images/4-AD/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 </li>
 </ol>
-<p><img src="/images/4-AD/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="6">
-<li>In Choose VPC and subnets, select the VPC Hybrid<strong>DNS</strong>-VPCStack that we created earlier and two private subnets, Private subnet 1A and Private subnet 2A. Then select Next.</li>
-</ol>
-<p><img src="/images/4-AD/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="7">
-<li>On the Review &amp; create screen, review the settings and select Create Directory.</li>
-</ol>
-<p><img src="/images/4-AD/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="8">
-<li>Directory will take about 20 minutes to create. During this time, AWS will provision two <strong>Windows</strong> servers and elevate them to <strong>Active Directory</strong> domain controllers for the AD forest you specified. This AD forest will be a new AD forest. The process will be complete when you see the status change to Active</li>
-</ol>
-<p><img src="/images/4-AD/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="9">
-<li>Once the directory has been created, you can view the details by clicking on the Directory ID. The two <strong>DNS</strong> IP addresses listed are the IP addresses of <strong>elastic network interfaces</strong> (ENI) that have your availability zone set to communicate with <strong>AWS Managed Microsoft AD Domain Controllers</strong>.</li>
-</ol>
-<p><img src="/images/4-AD/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
 
 
@@ -982,19 +976,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

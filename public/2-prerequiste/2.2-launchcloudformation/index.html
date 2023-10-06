@@ -12,21 +12,21 @@
     <title>Initialize CloudFormation Template :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -639,93 +639,82 @@
 	<h4 id="initialize-cloudformation-template">Initialize CloudFormation Template</h4>
 <p>In this step, you will build the network infrastructure in AWS. In this section, you&rsquo;ll leverage the template from <strong>AWS Quick Start</strong> to build a secure and high availability (HA) network infrastructure using <strong>AWS CloudFormation</strong>. This is the architecture that will be built from the template.</p>
 <p><img src="/images/2-Pre/0002.png?featherlight=false&amp;width=45pc" alt="Launch CloudFormation"></p>
-<p>In this section, you will get hands-on experience with <strong>AWS CloudFormation</strong> to build network infrastructure.</p>
+<h4 id="hands-on-with-aws-cloudformation">Hands-on with AWS CloudFormation</h4>
 <ol>
 <li>
-<p>Login to <strong>AWS Management Console</strong></p>
+<p><strong>Login to AWS Management Console</strong></p>
 <ul>
 <li>Find <strong>CloudFormation</strong></li>
 <li>Select <strong>CloudFormation</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0001.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="2">
-<li>In the <strong>CloudFormation</strong> interface, select <strong>Create stack</strong>.</li>
-</ol>
-<p><img src="/images/2.2-LaunchCloudFormation/0002.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="3">
+</li>
 <li>
-<p>In the <strong>Create stack</strong> interface</p>
+<p>In the <strong>CloudFormation</strong> interface, select <strong>Create stack</strong>.</p>
+<p><img src="/images/2.2-LaunchCloudFormation/0002.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
+</li>
+<li>
+<p>In the <strong>Create stack</strong> interface:</p>
 <ul>
 <li><strong>Prepare Template</strong>: Template is ready</li>
 <li><strong>Template Source</strong>: <strong>Amazon S3 URL</strong></li>
 <li><strong>Amazon S3 URL</strong>: <a href="https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template">https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template</a></li>
 <li>Select <strong>Next</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0003.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="4">
+</li>
 <li>
-<p>Implement stack configuration</p>
+<p>Implement stack configuration:</p>
 <ul>
 <li>In Stack name, enter <strong>HybridDNS</strong>.</li>
 <li>In <strong>Availability Zones</strong>, select <strong>ap-northeast-1a and ap-northeast-1</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0004.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="5">
+</li>
 <li>
-<p>Perform Network configuration.</p>
+<p>Perform Network configuration:</p>
 <ul>
 <li>In <strong>VPC CIDR, Private Subnet 1 &amp; 2 CIDR, and Public Subnet 1 &amp; 2 CIDR</strong>, keep the default values.</li>
 <li>In <strong>Allowed Remote Desktop Gateway External Access CIDR</strong>, enter <strong>0.0.0.0/0</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0005.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-
-<div class="notices warning" ><p>This setting will allow any IP to remote into the RDP port of the EC2 instance that is about to be created. This is not a secure configuration and it is not recommended for deployment in production. We&rsquo;ll come back and tighten access once CloudFormation has finished deploying the template.</p>
-</div>
-
-<ol start="6">
+<blockquote>
+<p><strong>Note:</strong> The warning notice highlights that this configuration allows any IP to remote into the RDP port of the EC2 instance, which is not secure for production.</p>
+</blockquote>
+</li>
 <li>
-<p>In <strong>Amazon EC2 configuration</strong> step</p>
+<p>In <strong>Amazon EC2 configuration</strong> step:</p>
 <ul>
 <li>In <strong>Key Pair Name</strong>, select the previously created Key Pair (hybrid-<strong>DNS</strong>).</li>
 <li>In <strong>Remote Desktop Gateway Instance Type</strong>, keep the default value (t2.large).</li>
 <li>In <strong>Number of RDGW Hosts</strong>, keep the default value (1).</li>
 <li>In <strong>Admin User Name</strong>, keep the default value (StackAdmin).</li>
-<li><strong>Admin Password</strong>, set an easy to remember password for you.</li>
+<li><strong>Admin Password</strong>, set an easy-to-remember password for you.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0006.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-
-<div class="notices note" ><p>The above Diagram shows two RDGW hosts (one host per Availablity Zone (AZ)).
-As a practice goal, we&rsquo;ll start with an RDGW host to reduce CloudFormation&rsquo;s initial run time. However, according to the diagram, you can see that the RDGW host is deployed to the Autoscaling Group. After the CloudFormation stack deployment is complete, you can try to configure the AutoScaling group. AutoScaling group is the key service that provides availability and scalability for your application.</p>
-</div>
-
-<ol start="7">
-<li>For other options, keep the default value and select Next</li>
-</ol>
+<blockquote>
+<p><strong>Note:</strong> The note provides additional information about the RDGW hosts and the use of AutoScaling groups for availability and scalability.</p>
+</blockquote>
+</li>
+<li>
+<p>For other options, keep the default value and select Next.</p>
 <p><img src="/images/2.2-LaunchCloudFormation/0007.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="8">
-<li>Select <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Select <strong>Next</strong>.</p>
 <p><img src="/images/2.2-LaunchCloudFormation/0008.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="9">
-<li>On the Review HybridDNS screen, check the settings again. Select the two checkboxes and select <strong>Create Stack</strong>.</li>
-</ol>
+</li>
+<li>
+<p>On the Review HybridDNS screen, check the settings again. Select the two checkboxes and select <strong>Create Stack</strong>.</p>
 <p><img src="/images/2.2-LaunchCloudFormation/0009.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="10">
-<li>The template takes about 15 minutes to complete. In the meantime, we&rsquo;ll take a look at what the CloudFormation template will create. After completing the stack initialization, the stack state will change to <strong>CREATE_COMPLETE</strong>.</li>
-</ol>
+</li>
+<li>
+<p>The template takes about 15 minutes to complete. In the meantime, we&rsquo;ll take a look at what the CloudFormation template will create. After completing the stack initialization, the stack state will change to <strong>CREATE_COMPLETE</strong>.</p>
 <p><img src="/images/2.2-LaunchCloudFormation/00010.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="11">
-<li>View <strong>Output</strong> of the newly created Stack.</li>
+</li>
+<li>
+<p>View <strong>Output</strong> of the newly created Stack.</p>
+</li>
 </ol>
 
 
@@ -1007,19 +996,19 @@ As a practice goal, we&rsquo;ll start with an RDGW host to reduce CloudFormation
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

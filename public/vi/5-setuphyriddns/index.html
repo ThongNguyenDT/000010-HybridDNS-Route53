@@ -12,21 +12,21 @@
     <title>Thiết lập DNS :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -630,17 +630,17 @@
 
 
 
-	<h4 id="thiết-lập-dns">Thiết lập <strong>DNS</strong></h4>
-<p>Trong phòng phần thực hành này, bạn sẽ sử dụng ba công cụ (<strong>Outbound Endpoint</strong>, Resolver Rules, và Inbound Endpoints) của <strong>Route 53 Resolver</strong> để thiết lập hybrid <strong>DNS</strong> cho hạ tầng AWS và On-premise.</p>
+	<h4 id="thiết-lập-dns">Thiết lập DNS</h4>
+<p>Trong phòng phần thực hành này, bạn sẽ sử dụng ba công cụ (<em>Outbound Endpoint</em>, Resolver Rules, và Inbound Endpoints) của <strong>Route 53 Resolver</strong> để thiết lập hybrid <strong>DNS</strong> cho hạ tầng AWS và On-premise.</p>
 <p>Dịch vụ <strong>AWS Managed Microsoft Active Directory</strong> mà bạn đã tạo ở phần trước sẽ được sử dụng để mô phỏng hệ thống <strong>DNS</strong> on-premise của bạn. Hình dưới đây sẽ thể hiện kiến trúc mà bạn sẽ xây dựng tiếp tục dựa trên những hạ tầng mà bạn đã triển khai ở phần trước:</p>
 <p><img src="/images/2-Pre/0005.png?featherlight=false&amp;width=60pc" alt="Route 53"></p>
-<p>Giải thích:</p>
+<h4 id="giải-thích">Giải thích:</h4>
 <ul>
-<li><strong>Mũi tên màu đỏ</strong> – Bạn sẽ cấu hình <strong>Outbound Endpoint</strong> để tạo cầu nối cho <strong>Route 53 Resolver</strong> có thể chuyển tiếp (forward) các truy vấn <strong>DNS</strong> tới AWS Managed <strong>Active Directory</strong>.</li>
+<li><strong>Mũi tên màu đỏ</strong> – Bạn sẽ cấu hình <em>Outbound Endpoint</em> để tạo cầu nối cho <strong>Route 53 Resolver</strong> có thể chuyển tiếp (<em>forward</em>) các truy vấn <strong>DNS</strong> tới AWS Managed <strong>Active Directory</strong>.</li>
 <li>Bạn sẽ tạo <strong>Route 53 Resolver</strong> Rule để lập chỉ dẫn cho việc chuyển tiếp các truy vấn <strong>DNS</strong> từ <strong>Route 53 Resolver</strong> ra bên ngoài tới AWS Managed <strong>Active Directory</strong>.</li>
-<li><strong>Mũi tên màu xanh dương</strong> – Bạn sẽ cấu hình Inbound Endpoint để tạo cầu nối cho AWS Managed <strong>Active Directory</strong> có thể chuyển tiếp các truy vấn <strong>DNS</strong> tới <strong>Route 53 Resolver</strong>. Từ đó, Route 53 - Resolver có thể chuyến tiếp các truy vấn ấy tới các <strong>EC2 instance</strong> đang đóng vai trò là Remote Desktop Gateway.</li>
+<li><strong>Mũi tên màu xanh dương</strong> – Bạn sẽ cấu hình <em>Inbound Endpoint</em> để tạo cầu nối cho AWS Managed <strong>Active Directory</strong> có thể chuyển tiếp các truy vấn <strong>DNS</strong> tới <strong>Route 53 Resolver</strong>. Từ đó, Route 53 Resolver có thể chuyển tiếp các truy vấn ấy tới các <strong>EC2 instance</strong> đang đóng vai trò là Remote Desktop Gateway.</li>
 <li><strong>Mũi tên màu xanh lá</strong> – <strong>EC2 instance</strong> sẽ kết nối tới <strong>Route 53 Resolver</strong> bằng địa chỉ IP VPC+2. Theo mặc định, VPC+2 là địa chỉ IP cho <strong>DNS</strong> Resolver của VPC. (Ví dụ: VPC CIDR ở bài này là 10.0.0.0/16. Vậy, địa chỉ IP của <strong>DNS</strong> Resolver trong VPC là 10.0.0.2).</li>
-<li><strong>Mũi tên màu đen</strong>– <strong>Route 53 Resolver</strong> có thể chuyển tiếp các truy vấn <strong>DNS</strong> từ <strong>EC2 instance</strong> hoặc AWS Managed <strong>Active Directory</strong> tới các dịch vụ khác của AWS.</li>
+<li><strong>Mũi tên màu đen</strong> – <strong>Route 53 Resolver</strong> có thể chuyển tiếp các truy vấn <strong>DNS</strong> từ <strong>EC2 instance</strong> hoặc AWS Managed <strong>Active Directory</strong> tới các dịch vụ khác của AWS.</li>
 </ul>
 <h4 id="nội-dung">Nội dung</h4>
 <ol>
@@ -649,11 +649,10 @@
 <li><a href="5.3-createie/">Tạo Route 53 Inbound Endpoints</a></li>
 <li><a href="5.4-results/">Thử nghiệm kết quả</a></li>
 </ol>
-
-<div class="notices note" ><p>Sau khi thực hiện, bạn sẽ hiểu được cách thiết lập hybrid <strong>DNS</strong> giữa các <strong>DNS</strong> hosted zone ở hệ thống on-premise và ở AWS. Trong bài thực hành, chúng ta đã sử dụng máy chủ AWS Managed Microsoft AD <strong>DNS</strong> để mô phỏng hệ thống <strong>DNS</strong> on-premise. Để hình dung về sự tích hợp với môi trường on-premise thực tế của mình, bạn cần chỉ định địa chỉ IP cho các máy chủ <strong>DNS</strong> on-premise của mình thay vì địa chỉ IP của AWS Managed Microsoft AD <strong>DNS</strong>.
-Để cho phép các máy chủ <strong>DNS</strong> on-premise của bạn phân giải bất kì AWS Private Zones nào host trên Route 53, bạn sẽ tạo các <strong>DNS</strong> forwarding rule trong hệ thống <strong>DNS</strong> on-premise của mình. Đối với các tên miền <strong>DNS</strong> được host trên Route 53, hãy forward đến địa chỉ IP của Inbound Endpoint.</p>
-</div>
-
+<blockquote>
+<p><strong>Lưu ý:</strong> Sau khi thực hiện, bạn sẽ hiểu được cách thiết lập hybrid <strong>DNS</strong> giữa các <strong>DNS</strong> hosted zone ở hệ thống on-premise và ở AWS. Trong bài thực hành, chúng ta đã sử dụng máy chủ AWS Managed Microsoft AD <strong>DNS</strong> để mô phỏng hệ thống <strong>DNS</strong> on-premise. Để hình dung về sự tích hợp với môi trường on-premise thực tế của mình, bạn cần chỉ định địa chỉ IP cho các máy chủ <strong>DNS</strong> on-premise của mình thay vì địa chỉ IP của AWS Managed Microsoft AD <strong>DNS</strong>.
+Để cho phép các máy chủ <strong>DNS</strong> on-premise của bạn phân giải bất kỳ AWS Private Zones nào host trên Route 53, bạn sẽ tạo các <strong>DNS</strong> forwarding rule trong hệ thống <strong>DNS</strong> on-premise của mình. Đối với các tên miền <strong>DNS</strong> được host trên Route 53, hãy forward đến địa chỉ IP của Inbound Endpoint.</p>
+</blockquote>
 
 
 
@@ -930,19 +929,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

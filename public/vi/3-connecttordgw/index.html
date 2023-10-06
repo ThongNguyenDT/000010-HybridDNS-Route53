@@ -12,21 +12,21 @@
     <title>Kết nối đến RDGW :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -631,67 +631,61 @@
 
 
 	<h4 id="kết-nối-đến-rdgw">Kết nối đến RDGW</h4>
-<p>Tiếp theo, bạn sẽ đăng nhập vào instance <strong>Remote Desktop Gateway Server (RDGW)</strong> bằng <strong>Remote Desktop Protocol (RDP)</strong>. Nếu bạn kết nối từ máy tính <strong>Windows</strong>, RDP sẽ có sẵn. Nếu bạn đang sử dụng máy Mac, vui lòng tải xuống <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">ứng dụng RDP tại đây</a>.</p>
+<p>Bước tiếp theo là đăng nhập vào máy chủ <strong>Remote Desktop Gateway (RDGW)</strong> bằng giao thức <strong>Remote Desktop Protocol (RDP)</strong>. Nếu bạn đang sử dụng máy tính <strong>Windows</strong>, RDP đã có sẵn. Nếu bạn đang sử dụng máy Mac, bạn cần tải ứng dụng RDP tại <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">đây</a>.</p>
 <ol>
-<li>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>EC2 Management console</strong></li>
-</ol>
-<p><img src="/images/3-RDGW/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="2">
 <li>
-<p>Trong giao diện <strong>EC2</strong></p>
+<p>Đăng nhập vào <strong>AWS Console</strong> và truy cập <strong>EC2 Management Console</strong>.</p>
+<p><img src="/images/3-RDGW/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Trong giao diện <strong>EC2</strong>:</p>
 <ul>
-<li>Ở menu bên trái, chọn <strong>Instances</strong>.</li>
-<li>Chọn checkbox ở vị trí máy chủ RDGW.</li>
+<li>Trong menu bên trái, chọn <strong>Instances</strong>.</li>
+<li>Chọn ô chọn ở máy chủ RDGW.</li>
 <li>Chọn <strong>Connect</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/3-RDGW/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
+</li>
 <li>
-<p>Trong giao diện <strong>Connect to instance</strong></p>
+<p>Trong giao diện <strong>Connect to Instance</strong>:</p>
 <ul>
-<li>Chọn <strong>RDP Client</strong> và chọn “<strong>Download Remote Desktop File</strong>” để tải tập tin RDP.</li>
+<li>Chọn <strong>RDP Client</strong> và chọn &ldquo;Tải tập tin Remote Desktop&rdquo;.</li>
 <li>Chọn <strong>Get Password</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/3-RDGW/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
+</li>
 <li>
-<p>Trong giao diện <strong>Get <strong>Windows</strong> password</strong></p>
+<p>Trong giao diện <strong>Get Windows Password</strong>:</p>
 <ul>
-<li>Chọn Browse và trỏ đến vị trí tập tin key pair chúng ta đã tải trước đó.</li>
+<li>Chọn <strong>Browse</strong> và tìm tập tin key pair bạn đã tải trước đó.</li>
 <li>Chọn <strong>Decrypt Password</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/3-RDGW/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
-<li>Khi đã có mật khẩu được giải mã, sao chép và lưu lại.</li>
-</ol>
-<p><img src="/images/3-RDGW/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="6">
+</li>
 <li>
-<p>Khởi chạy tập tin RDP đã tải và sử dụng mật khẩu ở trên để đăng nhập vào máy chủ RDGW.</p>
+<p>Khi mật khẩu được giải mã, sao chép và lưu lại.</p>
+<p><img src="/images/3-RDGW/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Mở tập tin RDP đã tải và sử dụng mật khẩu ở bước trước để đăng nhập vào máy chủ RDGW.</p>
 <ul>
-<li>Chọn <strong>Connect</strong></li>
+<li>Chọn <strong>Connect</strong>.</li>
 </ul>
+<p><img src="/images/3-RDGW/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Nhập mật khẩu và chọn <strong>OK</strong>.</p>
+<p><img src="/images/3-RDGW/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Tiếp tục chọn <strong>Yes</strong>.</p>
+<p><img src="/images/3-RDGW/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Đây là màn hình kết nối thành công vào máy chủ.</p>
+<p><img src="/images/3-RDGW/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 </li>
 </ol>
-<p><img src="/images/3-RDGW/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="7">
-<li>Nhập password và chọn <strong>OK</strong></li>
-</ol>
-<p><img src="/images/3-RDGW/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="8">
-<li>Tiếp tục chọn <strong>Yes</strong></li>
-</ol>
-<p><img src="/images/3-RDGW/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="9">
-<li>Đây là màn hình kết nối vào instance thành công</li>
-</ol>
-<p><img src="/images/3-RDGW/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
 
 
@@ -968,19 +962,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

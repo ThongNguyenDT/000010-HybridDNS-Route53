@@ -12,21 +12,21 @@
     <title>Connecting to RDGW :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -631,67 +631,61 @@
 
 
 	<h4 id="connect-to-rdgw">Connect to RDGW</h4>
-<p>Next, you will log in to the <strong>Remote Desktop Gateway Server (RDGW)</strong> instance using <strong>Remote Desktop Protocol (RDP)</strong>. If you connect from a <strong>Windows</strong> computer, RDP will be available. If you are using a Mac, please download the <a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac">RDP client here</a>.</p>
+<p>In this section, you will learn how to connect to the <strong>Remote Desktop Gateway Server (RDGW)</strong> instance using the <strong>Remote Desktop Protocol (RDP)</strong>. The process varies depending on your operating system.</p>
 <ol>
-<li>Login to <strong>AWS Console</strong> and access <strong>EC2 Management console</strong></li>
-</ol>
+<li>
+<p><strong>Login to AWS Console</strong> and access the <strong>EC2 Management console</strong>.</p>
 <p><img src="/images/3-RDGW/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="2">
-<li>
-<p>In <strong>EC2</strong> interface</p>
-<ul>
-<li>In the left menu, select <strong>Instances</strong>.</li>
-<li>Select the checkbox at the RDGW server location.</li>
-<li>Select <strong>Connect</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>In the <strong>EC2</strong> interface:</p>
+<ul>
+<li>On the left menu, select <strong>Instances</strong>.</li>
+<li>Check the checkbox next to the RDGW server instance.</li>
+<li>Click on <strong>Connect</strong>.</li>
+</ul>
 <p><img src="/images/3-RDGW/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>
-<p>In the <strong>Connect to instance</strong> interface</p>
-<ul>
-<li>Select <strong>RDP Client</strong> and select “<strong>Download Remote Desktop File</strong>” to download the RDP file.</li>
-<li>Select <strong>Get Password</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>In the <strong>Connect to instance</strong> interface:</p>
+<ul>
+<li>Choose <strong>RDP Client</strong> and then select &ldquo;<strong>Download Remote Desktop File</strong>&rdquo; to download the RDP file.</li>
+<li>Click on <strong>Get Password</strong>.</li>
+</ul>
 <p><img src="/images/3-RDGW/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
-<li>
-<p>In the <strong>Get <strong>Windows</strong> password</strong> interface</p>
-<ul>
-<li>Select Browse and point to the location of the key pair file we downloaded earlier.</li>
-<li>Select <strong>Decrypt Password</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>In the <strong>Get Windows password</strong> interface:</p>
+<ul>
+<li>Click on <strong>Browse</strong> and navigate to the location where you saved the key pair file downloaded earlier.</li>
+<li>Click on <strong>Decrypt Password</strong>.</li>
+</ul>
 <p><img src="/images/3-RDGW/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
-<li>Once you have the decrypted password, copy and save it.</li>
-</ol>
-<p><img src="/images/3-RDGW/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="6">
+</li>
 <li>
-<p>Launch the downloaded RDP file and use the above password to login to the RDGW server.</p>
+<p>Once you have the decrypted password, make sure to copy and save it securely.</p>
+<p><img src="/images/3-RDGW/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Launch the downloaded RDP file and use the password obtained in the previous step to log in to the RDGW server.</p>
 <ul>
-<li>Select <strong>Connect</strong></li>
+<li>Click on <strong>Connect</strong>.</li>
 </ul>
+<p><img src="/images/3-RDGW/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Enter the password and click on <strong>OK</strong>.</p>
+<p><img src="/images/3-RDGW/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>Continue by selecting <strong>Yes</strong>.</p>
+<p><img src="/images/3-RDGW/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+</li>
+<li>
+<p>You should now see the screen indicating a successful connection to the instance.</p>
+<p><img src="/images/3-RDGW/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 </li>
 </ol>
-<p><img src="/images/3-RDGW/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="7">
-<li>Enter the password and select <strong>OK</strong></li>
-</ol>
-<p><img src="/images/3-RDGW/0007.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="8">
-<li>Continue to select <strong>Yes</strong></li>
-</ol>
-<p><img src="/images/3-RDGW/0008.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="9">
-<li>This is the screen connecting to the instance successfully</li>
-</ol>
-<p><img src="/images/3-RDGW/0009.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
 
 
@@ -968,19 +962,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

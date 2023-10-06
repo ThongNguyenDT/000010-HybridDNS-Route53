@@ -12,21 +12,21 @@
     <title>Tạo Route 53 Outbound Endpoint :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -636,38 +636,31 @@
 
 
 
-	<h4 id="tạo-route-53-outbound-endpoint">Tạo Route 53 <strong>Outbound Endpoint</strong></h4>
-<p>Bước đầu tiên, chúng ta sẽ tạo Route 53 <strong>Outbound Endpoint</strong> để cho phép <strong>Route 53 Resolver</strong> có thể chuyển tiếp các truy vấn <strong>DNS</strong> có tên miền được host bên ngoài Route 53. Khi bạn Route 53 <strong>Outbound Endpoint</strong>, AWS sẽ tạo một <strong>elastic network interface</strong> (ENI) trong mỗi <strong>Availability Zones</strong> (AZ) mà bạn chỉ định.</p>
-<p><img src="/images/2-Pre/0006.png?featherlight=false&amp;width=45pc" alt="RDGW"></p>
-<ol>
-<li>Truy cập Route 53 console thông qua khung tìm kiếm và tìm Route 53.</li>
-</ol>
+	<h4 id="tạo-route-53-outbound-endpoint">Tạo Route 53 Outbound Endpoint</h4>
+<p><strong>Bước 1:</strong> Đầu tiên, chúng ta sẽ tạo một <strong>Outbound Endpoint</strong> trong Route 53 để cho phép <strong>Route 53 Resolver</strong> chuyển tiếp các truy vấn <strong>DNS</strong> đối với tên miền được đặt trên hệ thống ngoài của Route 53. Khi bạn tạo một <strong>Outbound Endpoint</strong> trong Route 53, AWS sẽ tự động tạo một <strong>Elastic Network Interface</strong> (ENI) trong mỗi <strong>Availability Zone</strong> (AZ) mà bạn chỉ định.</p>
+<p><img src="/images/2-Pre/0006.png?featherlight=false&amp;width=45pc" alt="Hình ảnh"></p>
+<p><strong>Bước 2:</strong> Truy cập giao diện Route 53 thông qua khung tìm kiếm và chọn mục Route 53.</p>
 <ul>
-<li>Mở rộng thanh bên trái, chọn Outbound Endpoint<strong>s</strong> và chọn Create <strong>Outbound Endpoint</strong></li>
+<li>Mở rộng menu bên trái, chọn <strong>Outbound Endpoints</strong> và nhấn vào <strong>Create Outbound Endpoint</strong>.</li>
 </ul>
-<p><img src="/images/5.1-CreateOE/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="2">
-<li>Ở trang Create <strong>Outbound Endpoint</strong>, nhập các thông tin sau:
+<p><img src="/images/5.1-CreateOE/0001.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+<p><strong>Bước 3:</strong> Tại trang <strong>Create Outbound Endpoint</strong>, điền các thông tin sau:</p>
 <ul>
-<li>Endpoint name: R53-OutboundEndpoint</li>
-<li><strong>VPC in the Region</strong>: HybridDNS-VPCStack-. (Đây là VPC được tạo bởi CloudFormation ở phần trước)</li>
-<li><strong>Security group for this endpoint</strong>: d-###….#_controllers. (Đây là security group mà CloudFormation đã tạo để bảo vệ kết nối tới <strong>AWS Managed Microsoft Active Directory</strong>)</li>
+<li><strong>Endpoint name</strong>: R53-OutboundEndpoint</li>
+<li><strong>VPC in the Region</strong>: HybridDNS-VPCStack- (Đây là VPC đã được tạo bởi CloudFormation trong phần trước)</li>
+<li><strong>Security group for this endpoint</strong>: d-###….#_controllers (Đây là security group được tạo bởi CloudFormation để bảo vệ kết nối tới <strong>AWS Managed Microsoft Active Directory</strong>)</li>
 </ul>
-</li>
-</ol>
-<p><img src="/images/5.1-CreateOE/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>Thực hiện cấu hình <strong>IP addresses</strong></li>
-</ol>
+<p><img src="/images/5.1-CreateOE/0002.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+<p><strong>Bước 4:</strong> Tiến hành cấu hình <strong>IP addresses</strong></p>
 <ul>
-<li>Ở <strong>IP address #1:</strong>
+<li><strong>IP address #1:</strong>
 <ul>
 <li>Ở <strong>Availability Zone</strong>, chọn “ap-southeast-1a”</li>
 <li>Ở <strong>Subnet</strong>, chọn “Private subnet 1A”</li>
 <li>Ở <strong>IP address</strong>, chọn “Use an IP address that is selected automatically”</li>
 </ul>
 </li>
-<li>Ở <strong>IP address #2:</strong>
+<li><strong>IP address #2:</strong>
 <ul>
 <li>Ở <strong>Availability Zone</strong>, chọn “ap-southeast-1c”</li>
 <li>Ở <strong>Subnet</strong>, chọn “Private subnet 2A”</li>
@@ -675,19 +668,13 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/5.1-CreateOE/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="3">
-<li>Cuối cùng, chọn <strong>Create Outbound Endpoint</strong>.</li>
-</ol>
-<p><img src="/images/5.1-CreateOE/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="4">
-<li>Sau 5 phút, <strong>Outbound Endpoint</strong> sẽ được hoàn tất cấu hình trong VPC của bạn.</li>
-</ol>
-<p><img src="/images/5.1-CreateOE/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
-<ol start="5">
-<li>Khi các <strong>Outbound Endpoint</strong> được tạo, hãy nhấp vào <strong>Outbound Endpoint</strong> để xem thông tin chi tiết của endpoint. Bạn sẽ thấy các địa chỉ IP đã được gán cho các <strong>Outbound Endpoint</strong>. AWS đưa một <strong>elastic network interface</strong> (ENI) vào subnet của bạn và gán địa chỉ IP này cho ENI.</li>
-</ol>
-<p><img src="/images/5.1-CreateOE/0006.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img src="/images/5.1-CreateOE/0003.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+<p><strong>Bước 5:</strong> Cuối cùng, nhấp vào <strong>Create Outbound Endpoint</strong>.</p>
+<p><img src="/images/5.1-CreateOE/0004.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+<p><strong>Bước 6:</strong> Sau khoảng 5 phút, <strong>Outbound Endpoint</strong> sẽ được cấu hình thành công trong VPC của bạn.</p>
+<p><img src="/images/5.1-CreateOE/0005.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
+<p><strong>Bước 7:</strong> Khi các <strong>Outbound Endpoint</strong> đã được tạo, nhấp vào mục <strong>Outbound Endpoint</strong> để xem thông tin chi tiết. Bạn sẽ thấy danh sách các địa chỉ IP đã được gán cho các <strong>Outbound Endpoint</strong>. AWS sẽ đặt một <strong>Elastic Network Interface</strong> (ENI) trong subnet của bạn và gán địa chỉ IP này cho ENI.</p>
+<p><img src="/images/5.1-CreateOE/0006.png?featherlight=false&amp;width=90pc" alt="Hình ảnh"></p>
 
 
 
@@ -965,19 +952,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Khởi tạo CloudFormation Template :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -611,6 +611,8 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#bước-1-đăng-nhập-vào-aws-management-console">Bước 1: Đăng nhập vào AWS Management Console</a></li>
+    <li><a href="#bước-2-tạo-stack-cloudformation">Bước 2: Tạo stack CloudFormation</a></li>
   </ul>
 </nav>
     </div>
@@ -637,48 +639,43 @@
 
 
 	<h4 id="khởi-tạo-cloudformation-template">Khởi tạo CloudFormation Template</h4>
-<p>Ở bước này, bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng template từ <strong>AWS Quick Start</strong> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật bằng <strong>AWS CloudFormation</strong>. Đây là kiến trúc sẽ được xây dựng từ template.</p>
+<p>Trong bước này, bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng template từ <strong>AWS Quick Start</strong> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật bằng <strong>AWS CloudFormation</strong>. Dưới đây là kiến trúc sẽ được xây dựng từ template.</p>
 <p><img src="/images/2-Pre/0002.png?featherlight=false&amp;width=45pc" alt="Launch CloudFormation"></p>
-<p>Trong phần này, bạn sẽ có trải nghiệm thực tế với <strong>AWS CloudFormation</strong> để xây dựng hạ tầng mạng.</p>
-<ol>
-<li>
-<p>Đăng nhập vào <strong>AWS Management Console</strong></p>
+<h2 id="bước-1-đăng-nhập-vào-aws-management-console">Bước 1: Đăng nhập vào AWS Management Console</h2>
 <ul>
-<li>Tìm <strong>CloudFormation</strong></li>
-<li>Chọn <strong>CloudFormation</strong></li>
+<li>Tìm và chọn <strong>CloudFormation</strong> trong AWS Management Console.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0001.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="2">
-<li>Trong giao diện <strong>CloudFormation</strong> chọn <strong>Create stack</strong>.</li>
+<h2 id="bước-2-tạo-stack-cloudformation">Bước 2: Tạo stack CloudFormation</h2>
+<ol>
+<li>Trong giao diện <strong>CloudFormation</strong>, chọn <strong>Create stack</strong>.</li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0002.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="3">
+<ol start="2">
 <li>
-<p>Trong giao diện <strong>Create stack</strong></p>
+<p>Trong giao diện <strong>Create stack</strong>:</p>
 <ul>
-<li><strong>Prepare Template</strong>: Template is ready</li>
+<li><strong>Prepare Template</strong>: Template đã sẵn sàng.</li>
 <li><strong>Template Source</strong>: <strong>Amazon S3 URL</strong></li>
 <li><strong>Amazon S3 URL</strong>: <a href="https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template">https://aws-quickstart.s3.amazonaws.com/quickstart-microsoft-rdgateway/templates/rdgw-master.template</a></li>
-<li>Chọn <strong>Next</strong></li>
+<li>Chọn <strong>Next</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0003.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="4">
+<ol start="3">
 <li>
-<p>Thực hiện cấu hình stack</p>
+<p>Thực hiện cấu hình stack:</p>
 <ul>
-<li>Ở Stack name, nhập <strong>HybridDNS</strong>.</li>
+<li>Ở <strong>Stack name</strong>, nhập <strong>HybridDNS</strong>.</li>
 <li>Ở <strong>Availability Zones</strong>, chọn <strong>ap-northeast-1a và ap-northeast-1</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0004.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="5">
+<ol start="4">
 <li>
-<p>Thực hiện cấu hình Network.</p>
+<p>Thực hiện cấu hình Network:</p>
 <ul>
 <li>Ở <strong>VPC CIDR, Private Subnet 1 &amp; 2 CIDR, và Public Subnet 1 &amp; 2 CIDR</strong>, giữ các giá trị mặc định.</li>
 <li>Ở <strong>Allowed Remote Desktop Gateway External Access CIDR</strong>, nhập <strong>0.0.0.0/0</strong>.</li>
@@ -686,13 +683,12 @@
 </li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0005.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-
-<div class="notices warning" ><p>Thiết lập này sẽ cho phép bất kỳ IP nào cũng có thể Remote vào cổng RDP của EC2 instance sắp được tạo. Đây không phải là cấu hình an toàn và nó không được khuyến nghị khi triển khai ở môi trường production. Chúng ta sẽ quay lại và siết chặt quyền truy cập sau khi CloudFormation đã hoàn tất triển khai template.</p>
-</div>
-
-<ol start="6">
+<blockquote>
+<p><strong>LƯU Ý</strong>: Thiết lập này cho phép bất kỳ địa chỉ IP nào cũng có thể truy cập vào cổng RDP của EC2 instance sắp được tạo. Đây không phải là cấu hình an toàn và không nên được sử dụng trong môi trường production. Chúng ta sẽ điều chỉnh quyền truy cập sau khi quá trình triển khai template CloudFormation hoàn tất.</p>
+</blockquote>
+<ol start="5">
 <li>
-<p>Trong bước <strong>Amazon EC2 configuration</strong></p>
+<p>Trong bước <strong>Amazon EC2 configuration</strong>:</p>
 <ul>
 <li>Trong <strong>Key Pair Name</strong>, chọn Key Pair đã tạo trước đó (hybrid-<strong>DNS</strong>).</li>
 <li>Ở <strong>Remote Desktop Gateway Instance Type</strong>, giữ giá trị mặc định (t2.large).</li>
@@ -703,29 +699,27 @@
 </li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0006.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-
-<div class="notices note" ><p>Ở Diagram phía trên thể hiện hai RDGW host (một host mỗi Availablity Zone (AZ)).
-Với mục tiêu làm thực hành, chúng ta sẽ bắt đầu với một RDGW host để giảm thời gian CloudFormation chạy khởi tạo. Tuy nhiên, theo như diagram, bạn có thể thấy RDGW host được triển khai vào Autoscaling Group. Sau khi CloudFormation stack triển khai hoàn thành, bạn có thể thử cấu hình AutoScaling group. AutoScaling group là dịch vụ chủ chốt cung cấp tính sẵn sàng và mở rộng cho ứng dụng của bạn.</p>
-</div>
-
-<ol start="7">
-<li>Ở các lựa chọn khác, giữ giá trị mặc định và chọn Next</li>
+<blockquote>
+<p><strong>GHI CHÚ</strong>: Diagram trên hiển thị hai RDGW host (một host mỗi Availability Zone). Trong mục đích thực hành, chúng ta bắt đầu với một RDGW host để giảm thời gian khởi tạo của CloudFormation. Tuy nhiên, như trong diagram, bạn có thể thấy RDGW host được triển khai trong một Auto Scaling Group. Sau khi quá trình triển khai CloudFormation stack hoàn tất, bạn có thể thử cấu hình Auto Scaling group. Auto Scaling group là một dịch vụ quan trọng cung cấp tính sẵn sàng và mở rộng cho ứng dụng của bạn.</p>
+</blockquote>
+<ol start="6">
+<li>Ở các lựa chọn khác, giữ giá trị mặc định và chọn <strong>Next</strong>.</li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0007.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="8">
-<li>Chọn <strong>Next</strong></li>
+<ol start="7">
+<li>Chọn <strong>Next</strong>.</li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0008.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="9">
-<li>Ở màn hình Review HybridDNS, kiểm tra lại thiết lập. Chọn vào hai lựa checkbox và chọn <strong>Create Stack</strong>.</li>
+<ol start="8">
+<li>Kiểm tra lại thiết lập của stack trong màn hình Review HybridDNS. Chọn vào hai ô checkbox và chọn <strong>Create Stack</strong>.</li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/0009.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="10">
-<li>Template mất khoảng 15 phút để hoàn thành. Trong thời gian này, chúng ta sẽ xem xét những gì mà template CloudFormation sẽ tạo. Sau khi hoàn thành khởi tạo stack, trạng thái stack sẽ thay đổi thành <strong>CREATE_COMPLETE</strong>.</li>
+<ol start="9">
+<li>Template mất khoảng 15 phút để hoàn thành. Trong thời gian này, chúng ta sẽ xem xét những thành phần mà template CloudFormation sẽ tạo. Sau khi quá trình khởi tạo stack hoàn tất, trạng thái của stack sẽ chuyển thành <strong>CREATE_COMPLETE</strong>.</li>
 </ol>
 <p><img src="/images/2.2-LaunchCloudFormation/00010.png?featherlight=false&amp;width=90pc" alt="Launch CloudFormation"></p>
-<ol start="11">
-<li>Xem <strong>Output</strong> của Stack vừa tạo.</li>
+<ol start="10">
+<li>Xem phần <strong>Output</strong> của stack vừa được tạo.</li>
 </ol>
 
 
@@ -1007,19 +1001,19 @@ Với mục tiêu làm thực hành, chúng ta sẽ bắt đầu với một RDG
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

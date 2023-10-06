@@ -12,21 +12,21 @@
     <title>Thiết lập Hybrid DNS với Route 53 Resolver :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270569" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270569" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270569" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270569" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270569" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270569" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270569" rel="stylesheet">
-    <link href="/css/theme.css?1692270569" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270569" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270569" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270569"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270569"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270569"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270569"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -580,14 +580,14 @@
  
 <h1 id="thiết-lập-hybrid-dns-với-route-53-resolver">Thiết lập Hybrid DNS với Route 53 Resolver</h1>
 <h4 id="tổng-quan">Tổng quan</h4>
-<p>Đa số các khách hàng hiện tại đang sở hữu một cơ sở hệ thống <strong>DNS</strong> on-premise. Khi bạn khởi tạo các tài nguyên trên nền tảng AWS, AWS có cung cấp dịch vụ <strong>DNS</strong> thông qua <strong>Amazon Route 53</strong>. Trong bài lab lần này, chúng ta sẽ tiến hành trải nghiệm bằng việc xây dựng hệ thống <strong>DNS</strong> hybrid nhằm cho phép bạn tích hợp với hệ thống <strong>DNS</strong> on-premise hiện tại với dịch vụ <strong>DNS</strong> của <strong>Amazon Route 53</strong>.</p>
+<p>Đa số các khách hàng hiện nay đang sở hữu một hệ thống DNS on-premise. Khi bạn tạo các tài nguyên trên nền tảng AWS, AWS cung cấp dịch vụ DNS thông qua Amazon Route 53. Trong bài lab này, chúng ta sẽ trải nghiệm xây dựng hệ thống DNS hybrid để tích hợp hệ thống DNS on-premise hiện có với dịch vụ DNS của Amazon Route 53.</p>
 <h4 id="route-53">Route 53</h4>
-<p><strong>Route 53</strong> cung cấp một số khả năng của <strong>DNS</strong> như: đăng ký miền <strong>DNS</strong> công cộng, khả năng tạo vùng <strong>DNS</strong> riêng, công cụ <strong>DNS</strong> hybrid và phân giải tên miền. Với tính năng phân giải tên miền, Route 53 Resolver có thể thực hiện tra cứu đệ quy đối với các hệ thống <strong>DNS</strong> công cộng.</p>
-<p>Trong Route 53, dịch vụ Route 53 Resolver cung cấp ba công cụ để kích hoạt kiến trúc <strong>DNS</strong> hybrid giữa cơ sở hệ thống <strong>DNS</strong> on-premise của bạn và AWS. Ba công cụ này là:</p>
+<p>Route 53 cung cấp nhiều khả năng của DNS, bao gồm đăng ký miền DNS công cộng, tạo vùng DNS riêng, công cụ DNS hybrid và phân giải tên miền. Với tính năng phân giải tên miền, Route 53 Resolver có khả năng thực hiện tra cứu đệ quy đối với các hệ thống DNS công cộng.</p>
+<p>Trong Route 53, dịch vụ Route 53 Resolver cung cấp ba công cụ để kích hoạt kiến trúc DNS hybrid giữa hệ thống DNS on-premise của bạn và AWS:</p>
 <ul>
-<li><strong>Outbound Endpoint</strong>s: Các truy vấn <strong>DNS</strong> từ <strong>Route 53 Resolver</strong> đến hệ thống <strong>DNS</strong> on-premise của bạn sẽ được gửi đi từ Outbound Endpoint<strong>s</strong>.</li>
-<li><strong>Inbound Endpoints</strong>: Inbound endpoints đóng vai trò là mục tiêu cho các truy vấn <strong>DNS</strong> từ hệ thống <strong>DNS</strong> on-premise của bạn đến các tên miền được lưu trữ trên AWS.</li>
-<li><strong>Route 53 Resolver</strong> Rules: Với Route 53 Resolver** Rules**, bạn có thể cấu hình Route 53 để chuyển tiếp các truy vấn <strong>DNS</strong> cho các tên miền cụ thể của bạn tới hệ thống <strong>DNS</strong> on-premise.</li>
+<li><strong>Outbound Endpoints</strong>: Các truy vấn DNS từ Route 53 Resolver đến hệ thống DNS on-premise của bạn sẽ được gửi từ Outbound Endpoints.</li>
+<li><strong>Inbound Endpoints</strong>: Inbound Endpoints đóng vai trò là điểm đích cho các truy vấn DNS từ hệ thống DNS on-premise của bạn đến các tên miền được lưu trữ trên AWS.</li>
+<li><strong>Route 53 Resolver Rules</strong>: Với Route 53 Resolver Rules, bạn có thể cấu hình Route 53 để chuyển tiếp các truy vấn DNS cho các tên miền cụ thể của bạn tới hệ thống DNS on-premise.</li>
 </ul>
 <p><img src="/images/icon.png?featherlight=false&amp;width=10pc" alt="Route 53"></p>
 <h4 id="nội-dung">Nội dung</h4>
@@ -596,7 +596,7 @@
 <li><a href="2-prerequiste/">Chuẩn bị</a></li>
 <li><a href="3-connecttordgw/">Kết nối đến RDGW</a></li>
 <li><a href="4-setupad/">Triển khai Microsoft AD</a></li>
-<li><a href="5-setuphyrid**DNS**/">Thiết lập <strong>DNS</strong></a></li>
+<li><a href="5-setuphybrid-DNS/">Thiết lập DNS</a></li>
 <li><a href="6-cleanup/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
@@ -862,19 +862,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270569"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270569"></script>
-    <script src="/js/jquery.sticky.js?1692270569"></script>
-    <script src="/js/featherlight.min.js?1692270569"></script>
-    <script src="/js/highlight.pack.js?1692270569"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270569"></script>
-    <script src="/js/learn.js?1692270569"></script>
-    <script src="/js/hugo-learn.js?1692270569"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270569" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270569"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

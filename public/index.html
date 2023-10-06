@@ -12,21 +12,21 @@
     <title>Set up Hybrid DNS with Route 53 Resolver :: SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1692270568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692270568" rel="stylesheet">
-    <link href="/css/hybrid.css?1692270568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692270568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692270568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692270568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692270568" rel="stylesheet">
-    <link href="/css/theme.css?1692270568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692270568" rel="stylesheet">
+    <link href="/css/nucleus.css?1696612869" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696612869" rel="stylesheet">
+    <link href="/css/hybrid.css?1696612869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696612869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696612869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696612869" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696612869" rel="stylesheet">
+    <link href="/css/theme.css?1696612869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696612869" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1692270568" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696612869" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692270568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696612869"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692270568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692270568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696612869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696612869"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692270568"></script>
+<script type="text/javascript" src="/js/search.js?1696612869"></script>
 
     
   </div>
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -580,14 +580,14 @@
  
 <h1 id="set-up-hybrid-dns-with-route-53-resolver">Set up Hybrid DNS with Route 53 Resolver</h1>
 <h4 id="overview">Overview</h4>
-<p>The majority of existing customers own an on-premise <strong>DNS</strong> system. When you initialize resources on the AWS platform, AWS provides <strong>DNS</strong> service through <strong>Amazon Route 53</strong>. In this lab, we will experiment with building a <strong>DNS</strong> hybrid system that will allow you to integrate with your existing <strong>DNS</strong> on-premise system with **DNS service ** of <strong>Amazon Route 53</strong>.</p>
+<p>The majority of existing customers own an on-premise <strong>DNS</strong> system. When you initialize resources on the AWS platform, AWS provides <strong>DNS</strong> service through <strong>Amazon Route 53</strong>. In this lab, we will explore building a <strong>DNS</strong> hybrid system that enables integration between your existing on-premise <strong>DNS</strong> system and the <strong>DNS</strong> service of <strong>Amazon Route 53</strong>.</p>
 <h4 id="route-53">Route 53</h4>
-<p><strong>Route 53</strong> provides some <strong>DNS</strong> capabilities such as public <strong>DNS</strong> domain registration, the ability to create private <strong>DNS</strong> zones, <strong>DNS</strong> hybrid engine, and domain name resolution. With domain name resolution, Route 53 Resolver can perform recursive lookups against public <strong>DNS</strong> systems.</p>
-<p>In Route 53, the Route 53 Resolver service provides three tools to enable a hybrid <strong>DNS</strong> architecture between your <strong>DNS</strong> on-premise system and AWS. These three tools are:</p>
+<p><strong>Route 53</strong> offers various <strong>DNS</strong> capabilities, including public <strong>DNS</strong> domain registration, the creation of private <strong>DNS</strong> zones, a <strong>DNS</strong> hybrid engine, and domain name resolution. Route 53 Resolver, within Route 53, can perform recursive lookups against public <strong>DNS</strong> systems.</p>
+<p>Within Route 53, the Route 53 Resolver service provides three essential tools for establishing a hybrid <strong>DNS</strong> architecture between your on-premise <strong>DNS</strong> system and AWS:</p>
 <ul>
-<li><strong>Outbound Endpoint</strong>s: <strong>DNS</strong> queries from <strong>Route 53 Resolver</strong> to your <strong>DNS</strong> system will be sent from Outbound Endpoint<strong>s</strong> .</li>
-<li><strong>Inbound Endpoints</strong>: Inbound endpoints act as targets for <strong>DNS</strong> queries from your <strong>DNS</strong> on-premise system to domains hosted on AWS.</li>
-<li><strong>Route 53 Resolver Rules</strong>: With Route 53 Resolver Rules, you can configure Route 53 to forward <strong>DNS</strong> queries for your specific domains to the system DNS on-premise.</li>
+<li><strong>Outbound Endpoints</strong>: These are used for sending <strong>DNS</strong> queries from <strong>Route 53 Resolver</strong> to your on-premise <strong>DNS</strong> system.</li>
+<li><strong>Inbound Endpoints</strong>: These act as targets for <strong>DNS</strong> queries originating from your on-premise <strong>DNS</strong> system to domains hosted on AWS.</li>
+<li><strong>Route 53 Resolver Rules</strong>: This feature lets you configure Route 53 to forward <strong>DNS</strong> queries for specific domains to your on-premise system&rsquo;s DNS.</li>
 </ul>
 <p><img src="/images/icon.png?featherlight=false&amp;width=10pc" alt="Route 53"></p>
 <h4 id="content">Content</h4>
@@ -862,19 +862,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692270568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692270568"></script>
-    <script src="/js/jquery.sticky.js?1692270568"></script>
-    <script src="/js/featherlight.min.js?1692270568"></script>
-    <script src="/js/highlight.pack.js?1692270568"></script>
+    <script src="/js/clipboard.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696612869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696612869"></script>
+    <script src="/js/jquery.sticky.js?1696612869"></script>
+    <script src="/js/featherlight.min.js?1696612869"></script>
+    <script src="/js/highlight.pack.js?1696612869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692270568"></script>
-    <script src="/js/learn.js?1692270568"></script>
-    <script src="/js/hugo-learn.js?1692270568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696612869"></script>
+    <script src="/js/learn.js?1696612869"></script>
+    <script src="/js/hugo-learn.js?1696612869"></script>
 
-    <link href="/mermaid/mermaid.css?1692270568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692270568"></script>
+    <link href="/mermaid/mermaid.css?1696612869" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696612869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
