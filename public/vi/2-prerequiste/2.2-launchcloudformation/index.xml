@@ -4,6 +4,8 @@
     <title>Khởi tạo CloudFormation Template on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
     <link>/vi/2-prerequiste/2.2-launchcloudformation/</link>
     <description>Recent content in Khởi tạo CloudFormation Template on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/2-prerequiste/2.2-launchcloudformation/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/2-prerequiste/2.2-launchcloudformation/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
