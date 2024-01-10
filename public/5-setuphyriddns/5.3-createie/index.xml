@@ -4,8 +4,6 @@
     <title>Create Route 53 Inbound Endpoints on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
     <link>/5-setuphyriddns/5.3-createie/</link>
     <description>Recent content in Create Route 53 Inbound Endpoints on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="/5-setuphyriddns/5.3-createie/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/5-setuphyriddns/5.3-createie/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -4,8 +4,6 @@
     <title>Triển khai Microsoft AD on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
     <link>/vi/4-setupad/</link>
     <description>Recent content in Triển khai Microsoft AD on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>vi</language>
-    <atom:link href="/vi/4-setupad/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-setupad/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
