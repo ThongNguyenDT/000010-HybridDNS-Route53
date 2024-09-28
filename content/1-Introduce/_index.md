@@ -24,4 +24,4 @@ Within Route 53, the **Route 53 Resolver** service introduces three tools to fac
 2. **Inbound Endpoints**: These endpoints serve as targets for **DNS** queries from your on-premise **DNS** system to domains hosted on AWS.
 3. **Route 53 Resolver** Rules: Utilizing Resolver Rules, you can configure Route 53 to forward **DNS** queries for specific domains to your on-premise **DNS** system.
 
-![Route 53](/images/icon.png?featherlight=false&width=10pc)
+![Route 53](/images/icon.png?width=10pc)

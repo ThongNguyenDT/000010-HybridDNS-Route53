@@ -12,7 +12,7 @@ Bước tiếp theo là đăng nhập vào máy chủ **Remote Desktop Gateway (
 
 1. Đăng nhập vào **AWS Console** và truy cập **EC2 Management Console**.
 
-   ![RDGW](/images/3-RDGW/0001.png?featherlight=false&width=90pc)
+   ![RDGW](/images/3-RDGW/0001.png?width=90pc)
 
 2. Trong giao diện **EC2**:
 
@@ -20,25 +20,25 @@ Bước tiếp theo là đăng nhập vào máy chủ **Remote Desktop Gateway (
    - Chọn ô chọn ở máy chủ RDGW.
    - Chọn **Connect**.
 
-   ![RDGW](/images/3-RDGW/0002.png?featherlight=false&width=90pc)
+   ![RDGW](/images/3-RDGW/0002.png?width=90pc)
 
 3. Trong giao diện **Connect to Instance**:
 
    - Chọn **RDP Client** và chọn "Tải tập tin Remote Desktop".
    - Chọn **Get Password**.
 
-   ![RDGW](/images/3-RDGW/0003.png?featherlight=false&width=90pc)
+   ![RDGW](/images/3-RDGW/0003.png?width=90pc)
 
 4. Trong giao diện **Get Windows Password**:
 
    - Chọn **Browse** và tìm tập tin key pair bạn đã tải trước đó.
    - Chọn **Decrypt Password**.
 
-   ![RDGW](/images/3-RDGW/0004.png?featherlight=false&width=90pc)
+   ![RDGW](/images/3-RDGW/0004.png?width=90pc)
 
 5. Khi mật khẩu được giải mã, sao chép và lưu lại.
 
-   ![RDGW](/images/3-RDGW/0005.png?featherlight=false&width=90pc)
+   ![RDGW](/images/3-RDGW/0005.png?width=90pc)
 
 6. Mở tập tin RDP đã tải và sử dụng mật khẩu ở bước trước để đăng nhập vào máy chủ RDGW.
 

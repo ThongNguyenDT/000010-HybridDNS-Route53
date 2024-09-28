@@ -13,7 +13,7 @@ In this lab, you'll utilize three tools: **Outbound Endpoint**, Resolver Rules, 
 
 The **AWS Managed Microsoft Active Directory** service, created in the preceding section, will be employed to simulate your on-premise **DNS** system. The architecture you'll be building upon the existing infrastructure is depicted in the following figure:
 
-![Route 53](/images/2-Pre/0005.png?featherlight=false&width=60pc)
+![Route 53](/images/2-Pre/0005.png?width=60pc)
 
 #### Explanation
 

@@ -11,7 +11,7 @@ Trong phòng phần thực hành này, bạn sẽ sử dụng ba công cụ (*Ou
 
 Dịch vụ **AWS Managed Microsoft Active Directory** mà bạn đã tạo ở phần trước sẽ được sử dụng để mô phỏng hệ thống **DNS** on-premise của bạn. Hình dưới đây sẽ thể hiện kiến trúc mà bạn sẽ xây dựng tiếp tục dựa trên những hạ tầng mà bạn đã triển khai ở phần trước:
 
-![Route 53](/images/2-Pre/0005.png?featherlight=false&width=60pc)
+![Route 53](/images/2-Pre/0005.png?width=60pc)
 
 #### Giải thích:
 

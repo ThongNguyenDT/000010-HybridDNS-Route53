@@ -19,9 +19,9 @@ Bước tiếp theo là tạo các **Route 53 Resolver** Rule. **Route 53 Resolv
 ![RDGW](/images/5.2-CreateRoute53rule/0001.png?featherlight=false&width=90pc)
 
 2. Nhập các thông tin sau:
-   - **Name**: FowardToOnPremAD
+   - **Name**: `FowardToOnPremAD`
    - **Rule type**: Forward
-   - **Domain name**: onprem.example.com. (Đây là tên miền của directory mà bạn đã tạo ở phần trước)
+   - **Domain name**: `onprem.example.com.` (Đây là tên miền của directory mà bạn đã tạo ở phần trước)
    - **VPC that use this rule**: HybridDNS-VPCStack
    - **Outbound Endpoint**: R53-OutboundEndpoint
 

@@ -10,19 +10,19 @@ pre : " <b> 5.1 </b> "
 
 **Bước 1:** Đầu tiên, chúng ta sẽ tạo một **Outbound Endpoint** trong Route 53 để cho phép **Route 53 Resolver** chuyển tiếp các truy vấn **DNS** đối với tên miền được đặt trên hệ thống ngoài của Route 53. Khi bạn tạo một **Outbound Endpoint** trong Route 53, AWS sẽ tự động tạo một **Elastic Network Interface** (ENI) trong mỗi **Availability Zone** (AZ) mà bạn chỉ định.
 
-![Hình ảnh](/images/2-Pre/0006.png?featherlight=false&width=45pc)
+![RDGW](/images/2-Pre/0006.png?featherlight=false&width=45pc)
 
 **Bước 2:** Truy cập giao diện Route 53 thông qua khung tìm kiếm và chọn mục Route 53.
 - Mở rộng menu bên trái, chọn **Outbound Endpoints** và nhấn vào **Create Outbound Endpoint**.
 
-![Hình ảnh](/images/5.1-CreateOE/0001.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0001.png?featherlight=false&width=90pc)
 
 **Bước 3:** Tại trang **Create Outbound Endpoint**, điền các thông tin sau:
-   - **Endpoint name**: R53-OutboundEndpoint
+   - **Endpoint name**: `R53-OutboundEndpoint`
    - **VPC in the Region**: HybridDNS-VPCStack- (Đây là VPC đã được tạo bởi CloudFormation trong phần trước)
    - **Security group for this endpoint**: d-###….#_controllers (Đây là security group được tạo bởi CloudFormation để bảo vệ kết nối tới **AWS Managed Microsoft Active Directory**)
 
-![Hình ảnh](/images/5.1-CreateOE/0002.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0002.png?width=92pc)
 
 **Bước 4:** Tiến hành cấu hình **IP addresses**
 
@@ -35,16 +35,16 @@ pre : " <b> 5.1 </b> "
   - Ở **Subnet**, chọn “Private subnet 2A”
   - Ở **IP address**, chọn “Use an IP address that is selected automatically”
 
-![Hình ảnh](/images/5.1-CreateOE/0003.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0003.png?width=92pc)
 
 **Bước 5:** Cuối cùng, nhấp vào **Create Outbound Endpoint**.
 
-![Hình ảnh](/images/5.1-CreateOE/0004.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0004.png?featherlight=false&width=90pc)
 
 **Bước 6:** Sau khoảng 5 phút, **Outbound Endpoint** sẽ được cấu hình thành công trong VPC của bạn.
 
-![Hình ảnh](/images/5.1-CreateOE/0005.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0005.png?featherlight=false&width=90pc)
 
 **Bước 7:** Khi các **Outbound Endpoint** đã được tạo, nhấp vào mục **Outbound Endpoint** để xem thông tin chi tiết. Bạn sẽ thấy danh sách các địa chỉ IP đã được gán cho các **Outbound Endpoint**. AWS sẽ đặt một **Elastic Network Interface** (ENI) trong subnet của bạn và gán địa chỉ IP này cho ENI.
 
-![Hình ảnh](/images/5.1-CreateOE/0006.png?featherlight=false&width=90pc)
+![RDGW](/images/5.1-CreateOE/0006.png?featherlight=false&width=90pc)

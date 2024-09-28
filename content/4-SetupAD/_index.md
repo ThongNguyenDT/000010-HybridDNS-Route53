@@ -10,13 +10,13 @@ pre : " <b> 4. </b> "
 
 To set up **DNS emulation** on-premises, we will utilize the **AWS Directory Service** to deploy **AWS Managed Microsoft Active Directory** in two private subnets created by CloudFormation, as illustrated below:
 
-![RDGW](/images/2-Pre/0004.png?featherlight=false&width=45pc)
+![RDGW](/images/2-Pre/0004.png?width=45pc)
 
 1. Log in to the **AWS Console** and navigate to the Directory Service console by using the search box and selecting Directory Services.
    
    Ensure that you have chosen the appropriate Region. Check the top left corner of the **AWS Console** and select the desired Region (For instance, we're selecting ap-southeast-1).
    
-   ![RDGW](/images/4-AD/0001.png?featherlight=false&width=90pc)
+   ![RDGW](/images/4-AD/0001.png?width=90pc)
 
 2. If this is your first time accessing Directory Services in your region, you will be directed to the initial welcome screen. Expand the left sidebar and click on Directories.
    
@@ -32,15 +32,15 @@ To set up **DNS emulation** on-premises, we will utilize the **AWS Directory Ser
    
    - For **Edition**, select **Standard Edition**.
    
-   - For **Directory DNS name**, use onprem.example.com (ensure this **DNS** name is unique among your directories).
+   - For **Directory DNS name**, use `onprem.example.com` (ensure this **DNS** name is unique among your directories).
    
-   - For **Directory NetBIOS name**, use onprem (ensure this **NetBIOS** name is unique among your directories).
+   - For **Directory NetBIOS name**, use `onprem` (ensure this **NetBIOS** name is unique among your directories).
    
    ![RDGW](/images/4-AD/0004.png?featherlight=false&width=90pc)
 
 5. Proceed with the configuration:
    
-   - For **Directory Description**, use this to simulate the on-prem AD.
+   - For **Directory Description**, use `this to simulate the on-prem AD`.
    
    - Set an **Admin Password** that you can remember. Note the password complexity requirements provided on the screen.
    
@@ -50,7 +50,7 @@ To set up **DNS emulation** on-premises, we will utilize the **AWS Directory Ser
    
    ![RDGW](/images/4-AD/0005.png?featherlight=false&width=90pc)
 
-6. In the "Choose VPC and subnets" section, select the VPC named Hybrid**DNS**-VPCStack that we previously created, along with two private subnets: Private subnet 1A and Private subnet 2A. Then, proceed to the next step.
+6. In the "Choose VPC and subnets" section, select the VPC named **HybridDNS-VPCStack** that we previously created, along with two private subnets: **Private subnet 1A** and **Private subnet 2A**. Then, proceed to the next step.
    
    ![RDGW](/images/4-AD/0006.png?featherlight=false&width=90pc)
 

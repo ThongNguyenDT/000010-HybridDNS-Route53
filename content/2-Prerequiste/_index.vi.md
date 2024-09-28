@@ -12,7 +12,7 @@ pre : " <b> 2. </b> "
 
 Bước đầu tiên bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng **AWS Quick Start** để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật. Sau đó, bạn sẽ triển khai thêm một **AWS Managed Microsoft Active Directory** bằng dịch vụ **AWS Directory Service** để mô phỏng cho hệ thống **DNS** on-prem của bạn. Khi hoàn thành phần này, bạn sẽ triển khai thành công kiến trúc hạ tầng như sau:
 
-![Set up](/images/2-Pre/0001.png?featherlight=false&width=60pc)
+![Set up](/images/2-Pre/0001.png?width=60pc)
 
 ### **AWS Quick Starts**
 

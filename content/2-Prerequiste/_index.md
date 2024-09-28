@@ -12,7 +12,7 @@ pre : " <b> 2. </b> "
 
 Your initial task involves setting up the network infrastructure in AWS. In this segment, you will make use of **AWS Quick Start** to construct a secure and highly available (HA) network infrastructure. Additionally, you will deploy an instance of **AWS Managed Microsoft Active Directory** using **AWS Directory Service** to emulate your on-premises **DNS** system. Upon completing this stage, you will have successfully implemented the subsequent infrastructure architecture:
 
-![Set up](/images/2-Pre/0001.png?featherlight=false&width=60pc)
+![Set up](/images/2-Pre/0001.png?width=60pc)
 
 #### **AWS Quick Starts**
 

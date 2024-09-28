@@ -19,9 +19,9 @@ The next step involves creating **Route 53 Resolver** Rules. A **Route 53 Resolv
 ![RDGW](/images/5.2-CreateRoute53rule/0001.png?featherlight=false&width=90pc)
 
 2. Fill in the following information:
-   - **Name**: ForwardToOnPremAD
+   - **Name**: `ForwardToOnPremAD`
    - **Rule type**: Forward
-   - **Domain name**: onprem.example.com. (This is the domain name of the directory you created in the previous section)
+   - **Domain name**: `onprem.example.com.` (This is the domain name of the directory you created in the previous section)
    - **VPC that uses this rule**: HybridDNS-VPCStack
    - **Outbound Endpoint**: R53-OutboundEndpoint
 
